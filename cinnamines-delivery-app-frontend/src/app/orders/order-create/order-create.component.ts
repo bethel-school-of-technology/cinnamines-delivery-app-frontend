@@ -6,7 +6,10 @@ import { Component } from '@angular/core';
   templateUrl: './order-create.component.html'
 })
 export class OrderCreateComponent  {
-  onAddOrder() {
-    alert('Order added!');
+  enteredValue = '';
+  newOrder = 'NO CONTENT';
+
+  onAddOrder()  {
+    this.newOrder = this.enteredValue;
   }
 }
