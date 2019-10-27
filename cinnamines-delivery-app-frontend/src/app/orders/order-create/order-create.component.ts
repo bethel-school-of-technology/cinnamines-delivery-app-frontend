@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-
+import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-orders-create',
-  templateUrl: './order-create.component.html'
+  selector: 'app-order-create',
+  templateUrl: './order-create.component.html',
+  styleUrls: ['./order-create.component.css']
 })
-export class OrderCreateComponent  {
-  enteredValue = '';
-  newOrder = 'NO CONTENT';
+export class OrderCreateComponent implements OnInit {
 
-  onAddOrder()  {
-    this.newOrder = this.enteredValue;
+  constructor() { }
+
+  ngOnInit() {
   }
+
 }

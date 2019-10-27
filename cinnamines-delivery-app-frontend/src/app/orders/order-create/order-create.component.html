@@ -1,4 +1,21 @@
-<textarea rows="6" [(ngModel)]='enteredValue'></textarea>
-<hr>
-<button (click)="onAddOrder()">Save Order</button>
-<p>{{ newOrder }}</p>
+<div class="example-container">
+  <form type="submit">
+    <mat-form-field>
+      <input matInput placeholder="Name">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="email">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="phone">
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput placeholder="Quantity">
+    </mat-form-field>
+    <mat-form-field>
+      <textarea matInput placeholder="Address"></textarea>
+    </mat-form-field>
+    <form>
+
+      <button mat-raised-button color="primary" (click)=onAddOrder()>Submit Order</button>
+</div>
