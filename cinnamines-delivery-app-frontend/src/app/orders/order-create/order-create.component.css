@@ -2,4 +2,6 @@ div{
   font-family: "Indie Flower";
 
 }
-
+.mainLoginInput::-webkit-input-placeholder {
+  font-family: 'myFont', Arial, Helvetica, sans-serif;
+}
