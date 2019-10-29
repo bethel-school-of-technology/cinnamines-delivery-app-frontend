@@ -1,1 +1,9 @@
-<p>order-create works!</p>
+
+<mat-card>
+<mat-form-field>
+  <textarea matInput rows="6" [(ngModel)]="enteredValue"></textarea>
+</mat-form-field>
+<button mat-raised-button color="primary" (click)="onAddOrder()">Submit Order</button>
+</mat-card>
+
+<p>{{ newOrder }}</p>

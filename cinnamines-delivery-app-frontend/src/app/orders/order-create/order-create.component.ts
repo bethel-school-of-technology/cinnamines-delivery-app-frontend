@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -6,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./order-create.component.css']
 })
 export class OrderCreateComponent implements OnInit {
+  enteredValue = '';
+  newOrder = 'NO CONTENT';
+
+  onAddOrder() {
+    this.newOrder = this.enteredValue;
+  }
 
   constructor() { }
 
