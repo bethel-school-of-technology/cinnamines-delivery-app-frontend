@@ -7,9 +7,6 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  onAddOrder() {
-    alert('Thank you for your order!');
-  }
 
   constructor() { }
 
