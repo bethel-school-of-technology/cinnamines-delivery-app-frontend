@@ -6,7 +6,8 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule
+  MatToolbarModule,
+  MatExpansionModule
     } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -19,6 +20,8 @@ import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
 import { SignUpComponent } from './users/sign-up/sign-up.component';
 import { LogOnComponent } from './users/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
+import { AppRoutingModule } from './app-routing.module';
+import { Header1Component } from './header1/header1.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +34,8 @@ import { ProfileComponent } from './users/profile/profile.component';
     AdminOrdersComponent,
     SignUpComponent,
     LogOnComponent,
-    ProfileComponent
+    ProfileComponent,
+    Header1Component
   ],
   imports: [
     BrowserModule,
@@ -40,7 +44,9 @@ import { ProfileComponent } from './users/profile/profile.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule
+    MatToolbarModule,
+    AppRoutingModule,
+    MatExpansionModule
   ],
   providers: [],
   bootstrap: [AppComponent]
