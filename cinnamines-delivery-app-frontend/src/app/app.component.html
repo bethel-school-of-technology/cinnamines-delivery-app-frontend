@@ -1,5 +1,13 @@
 
 <app-header1></app-header1>
 <main>
-  <app-order-create></app-order-create>
+  <app-order-create (orderCreated)="onOrderAdded($event)"></app-order-create>
+  <app-order-history [orders]="storedOrders"></app-order-history>
+  <app-admin-profile></app-admin-profile>
+  <app-admin-orders></app-admin-orders>
+  <app-admin-profile-edit></app-admin-profile-edit>
+  <app-home></app-home>
+  <app-log-on></app-log-on>
+  <app-profile></app-profile>
+  <app-sign-up></app-sign-up>
 </main>

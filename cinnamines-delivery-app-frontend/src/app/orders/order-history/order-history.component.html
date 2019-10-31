@@ -1,1 +1,9 @@
-<p>order-history works!</p>
+<mat-accordion multi="true" *ngIf="orders.length > 0">
+  <mat-expansion-panel *ngFor="let order of orders">
+    <mat-expansion-panel-header>
+        {{ order.title }}
+    </mat-expansion-panel-header>
+    <p> {{ order.content }}</p>
+</mat-expansion-panel>
+</mat-accordion>
+<p class="info-text mat-body-1" *ngIf="orders.length <= 0">No orders added yet!</p>
