@@ -13,8 +13,51 @@ a {
 }
 img
     {
-     width: 80px;
-     height: 60px
+     width: 125px;
+     height: 110px;
+     float: auto;
 
     }
 
+    #gallery{
+
+        margin: 5px;
+        border: 1px solid #ccc;
+        float: right;
+        width: 1px;
+
+      }
+
+      div.gallery {
+        margin: 50px;
+        border: 1.2px solid #ccc;
+        float: right;
+        width: 180px;
+        background-color: antiquewhite;
+      }
+
+      div.gallery:hover {
+        border: 1px solid red;
+
+      }
+
+      div.gallery img {
+        width: 189px;
+        height: 189px;
+
+
+      }
+
+      div.desc {
+        padding: 1px;
+        text-align: center;
+        background-color: antiquewhite;
+      }
+
+      /* body {
+        margin: 0;
+        padding: 0;
+    }
+    .banner {
+        width: 100%;
+    } this was code to stretch an image in a header.  blurred it might come in handy in later uses--*/
