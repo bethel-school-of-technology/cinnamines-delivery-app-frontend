@@ -1,63 +1,102 @@
 li {
   display: inline;
   float: left;
-  font-size: 40px;
+  font-size: 28px;
+
 }
-
-
 
 a {
-  display: block;
-  padding: 30px;
+  /* display: block; */
+  padding: 23px;
+  margin-top: 0px;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  color:wheat;
+  font-style: oblique;
+
+  /* font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; */
+}
+img {
+  width: 47px;
+  height: auto;
+  float: auto;
+  /* padding-right: 50px; */
+}
+#scooteranchor {
+  margin-top: 0px;
+  padding-top: 0px;
 
 }
-img
-    {
-     width: 125px;
-     height: 110px;
-     float: auto;
 
-    }
+#gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 1px;
+}
 
-    #gallery{
+div.gallery {
+  margin: 50px;
+  border: 1.2px solid #ccc;
+  float: right;
+  width: 180px;
+  background-color: antiquewhite;
 
-        margin: 5px;
-        border: 1px solid #ccc;
-        float: right;
-        width: 1px;
+}
 
-      }
+div.gallery:hover {
+  border: 2px solid black;
 
-      div.gallery {
-        margin: 50px;
-        border: 1.2px solid #ccc;
-        float: right;
-        width: 180px;
-        background-color: antiquewhite;
-      }
+}
 
-      div.gallery:hover {
-        border: 1px solid red;
-
-      }
-
-      div.gallery img {
-        width: 189px;
-        height: 189px;
+div.gallery img {
+  width: 189px;
+  height: 189px;
+  border: 2px solid black;
 
 
-      }
+}
 
-      div.desc {
-        padding: 1px;
-        text-align: center;
-        background-color: antiquewhite;
-      }
+div.desc {
+  padding: 1px;
+  text-align: center;
+  background-color: antiquewhite;
 
-      /* body {
-        margin: 0;
-        padding: 0;
-    }
-    .banner {
-        width: 100%;
-    } this was code to stretch an image in a header.  blurred it might come in handy in later uses--*/
+}
+#logo {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+.banner {
+  text-align: center;
+  width: 40%;
+  height: 10%;
+  border: 2px solid black;
+  border-radius:  60px 110px;
+}
+
+footer {
+  margin: 30px;
+  color:wheat;
+}
+
+h1{
+  text-align: center;
+  color:wheat;
+}
+
+h2{
+  text-align: center;
+  color:wheat;
+}
+
+h3{
+  text-align: center;
+  color:wheat;
+}
+
+footer{
+  text-align: center;
+  color:wheat;
+}
