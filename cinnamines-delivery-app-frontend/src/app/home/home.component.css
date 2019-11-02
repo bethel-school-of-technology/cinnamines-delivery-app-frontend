@@ -40,7 +40,7 @@ div.gallery {
   border: 1.2px solid #ccc;
   float: right;
   width: 180px;
-  background-color: antiquewhite;
+  background-color:wheat;
 
 }
 
@@ -60,7 +60,7 @@ div.gallery img {
 div.desc {
   padding: 1px;
   text-align: center;
-  background-color: antiquewhite;
+  background-color: wheat;
 
 }
 #logo {
