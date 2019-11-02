@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { MyService } from 'src/services/my.service';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-log-on',
@@ -6,10 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./log-on.component.css']
 })
 export class LogOnComponent implements OnInit {
+  email: string;
+  password: string;
 
-  constructor() { }
+  constructor(private myService: MyService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  onLogin() {
+    this.myService.loginUser(this.email, this.password)
+      .subscribe(
+        user => this.router.navigate(['/home']),
+        error => document.getElementById('errorMessage').innerHTML = 'Email or Password Incorrect, please try again'
+      );
   }
 
 }

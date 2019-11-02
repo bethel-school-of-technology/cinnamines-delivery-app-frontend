@@ -1,7 +1,4 @@
-
 import { Component, OnInit } from '@angular/core';
-
-import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-order-create',
@@ -13,8 +10,6 @@ export class OrderCreateComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-
-  }
+  ngOnInit() { }
 
 }

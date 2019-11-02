@@ -6,8 +6,9 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule,  MatExpansionModule
-    } from '@angular/material';
+  MatToolbarModule, MatExpansionModule
+} from '@angular/material';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
@@ -20,6 +21,9 @@ import { SignUpComponent } from './users/sign-up/sign-up.component';
 import { LogOnComponent } from './users/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
+
+import { MyService } from 'src/services/my.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -40,10 +44,14 @@ import { AppRoutingModule } from './app-routing.module';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
+    MatToolbarModule,
     AppRoutingModule,
-    MatExpansionModule
+    MatExpansionModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [
+    MyService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
