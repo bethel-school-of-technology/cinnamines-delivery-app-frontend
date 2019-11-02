@@ -6,8 +6,7 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule,
-  MatExpansionModule
+  MatToolbarModule,  MatExpansionModule
     } from '@angular/material';
 
 import { AppComponent } from './app.component';
@@ -21,8 +20,6 @@ import { SignUpComponent } from './users/sign-up/sign-up.component';
 import { LogOnComponent } from './users/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
-import { Header1Component } from './header1/header1.component';
-
 @NgModule({
   declarations: [
     AppComponent,
@@ -35,7 +32,6 @@ import { Header1Component } from './header1/header1.component';
     SignUpComponent,
     LogOnComponent,
     ProfileComponent,
-    Header1Component
   ],
   imports: [
     BrowserModule,
@@ -44,7 +40,6 @@ import { Header1Component } from './header1/header1.component';
     MatInputModule,
     MatCardModule,
     MatButtonModule,
-    MatToolbarModule,
     AppRoutingModule,
     MatExpansionModule
   ],

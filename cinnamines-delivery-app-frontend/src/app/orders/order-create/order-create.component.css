@@ -1,8 +1,7 @@
 
 main {
-  margin-top: 1rem;
   width: 80%;
-  margin: auto;
+  margin: 1rems auto;
 }
 
 mat-form-field,
