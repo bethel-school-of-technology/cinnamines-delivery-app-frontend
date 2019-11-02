@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 
-import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
 import { OrderHistoryComponent } from './orders/order-history/order-history.component';
 import { HomeComponent } from './home/home.component';
@@ -15,15 +14,6 @@ import { ProfileComponent } from './users/profile/profile.component';
 
 const routes: Routes = [
   {
-    path: '',
-    component: AppComponent
-  },
-  {
-    path: '',
-    redirectTo: 'home',
-    pathMatch: 'full'
-  },
-  {
     path: 'home',
     component: HomeComponent
   },
@@ -35,7 +25,6 @@ const routes: Routes = [
     path: 'order-history',
     component: OrderHistoryComponent
   },
-  //
   {
     path: 'admin-profile',
     component: AdminProfileComponent
@@ -57,9 +46,14 @@ const routes: Routes = [
     component: LogOnComponent
   },
   {
-    path: 'profile',
+    path: 'profile/:id',
     component: ProfileComponent
   },
+  {
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
+  }
 ];
 
 @NgModule({

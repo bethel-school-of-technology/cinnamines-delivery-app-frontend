@@ -1,12 +1,14 @@
-<mat-card>
+<!-- needs header and input/textarea fields for qty, address, and delivDate -->
 
-    <mat-form-field>
-      <input matInput type="text" placeholder="Date" name="title" ngModel required #title="ngModel">
-      <mat-error *ngIf="title.invalid">Please enter a valid date</mat-error>
-    </mat-form-field>
-    <mat-form-field>
-      <textarea matInput rows="3" placeholder="Order" name="content" ngModel required minLength="5" #content="ngModel"></textarea>
-<mat-error *ngIf="content.invalid">Please enter a valid order</mat-error>
-    </mat-form-field>
-    <button mat-raised-button color="primary" type="submit">Submit Order</button>
+<mat-card>
+  <mat-form-field>
+    <input matInput type="text" placeholder="Date" name="title" ngModel required #title="ngModel">
+    <mat-error *ngIf="title.invalid">Please enter a valid date</mat-error>
+  </mat-form-field>
+  <mat-form-field>
+    <textarea matInput rows="3" placeholder="Order" name="content" ngModel required minLength="5"
+      #content="ngModel"></textarea>
+    <mat-error *ngIf="content.invalid">Please enter a valid order</mat-error>
+  </mat-form-field>
+  <button mat-raised-button color="primary" type="submit">Submit Order</button>
 </mat-card>
