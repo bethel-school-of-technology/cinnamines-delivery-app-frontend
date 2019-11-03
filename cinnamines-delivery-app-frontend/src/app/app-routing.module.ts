@@ -8,8 +8,8 @@ import { HomeComponent } from './home/home.component';
 import { AdminProfileComponent } from './admin-profile/admin-profile.component';
 import { AdminProfileEditComponent } from './admin-profile-edit/admin-profile-edit.component';
 import { AdminOrdersComponent } from './admin-orders/admin-orders.component';
-import { SignUpComponent } from './users/sign-up/sign-up.component';
-import { LogOnComponent } from './users/log-on/log-on.component';
+import { SignUpComponent } from './auth/sign-up/sign-up.component';
+import { LogOnComponent } from './auth/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
 
 const routes: Routes = [

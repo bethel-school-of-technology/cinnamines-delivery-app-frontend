@@ -3,7 +3,6 @@ import { User } from 'src/app/models/user';
 import { Order } from 'src/app/models/order';
 
 import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
