@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { MyService } from 'src/services/my.service';
+import { AuthService } from '../auth.service';
 import { Router } from '@angular/router';
 
 
@@ -12,16 +12,14 @@ export class LogOnComponent  {
   // email: string;
   // password: string;
 
-  // constructor(private myService: MyService, private router: Router) { }
+constructor(public authService: AuthService) { }
 
   // ngOnInit() { }
 
   onLogIn(form: NgForm) {
-    console.log(form.value);
-    // this.myService.loginUser(this.email, this.password)
-    //   .subscribe(
-    //     user => this.router.navigate(['/home']),
-    //     error => document.getElementById('errorMessage').innerHTML = 'Email or Password Incorrect, please try again'
-    //   );
+    if (form.invalid) {
+      return;
+    }
+    this.authService.login(form.value.email, form.value.name, form.value.phone, form.value.password);
   }
 }

@@ -8,15 +8,13 @@ import { MyService } from 'src/services/my.service';
   templateUrl: './admin-profile.component.html',
   styleUrls: ['./admin-profile.component.css']
 })
-export class AdminProfileComponent implements OnInit {
+export class AdminProfileComponent  {
   users: User[] = [];
 
   constructor( private myService: MyService ) { }
 
-  ngOnInit() {
-    this.myService.getUsers().subscribe(users => {
-      this.users = users;
-    });
+  // ngOnInit() {
+  //   this.myService.getUsers().subscribe(users => {
+  //     this.users = users;
+  //   });
   }
-
-}
