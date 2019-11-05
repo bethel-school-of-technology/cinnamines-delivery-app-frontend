@@ -16,14 +16,14 @@ export class AuthService {
   }
 
   createUser(email: string, name: string, phone: string, password: string) {
-    const authData: AuthData = {email: email, name: name, phone: phone, password: password};
+    const authData: AuthData = { email: email, name: name, phone: phone, password: password};
     this.http.post('http://localhost:4000/api/user/signup', authData)
     .subscribe(response => {
       console.log(response);
     });
   }
 
-login(email: string, name: string, phone: string, password: string) {
+  login(email: string, name: string, phone: string, password: string) {
   const authData: AuthData = { email: email, name: name, phone: phone, password: password };
   this.http.post<{token: string}>('http://localhost:4000/api/user/logon', authData)
     .subscribe(response => {

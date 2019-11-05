@@ -8,7 +8,7 @@ import {
   MatButtonModule,
   MatToolbarModule, MatExpansionModule
 } from '@angular/material';
-import { HttpClientModule } from '@angular/common/http';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
@@ -21,8 +21,8 @@ import { SignUpComponent } from './auth/sign-up/sign-up.component';
 import { LogOnComponent } from './auth/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
+import { AuthInterceptor } from './auth/auth-interceptor';
 
-import { MyService } from 'src/services/my.service';
 
 @NgModule({
   declarations: [
@@ -50,9 +50,8 @@ import { MyService } from 'src/services/my.service';
     MatExpansionModule,
     HttpClientModule,
   ],
-  providers: [
-    MyService
-  ],
+  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
+
   bootstrap: [AppComponent]
 })
 export class AppModule { }
