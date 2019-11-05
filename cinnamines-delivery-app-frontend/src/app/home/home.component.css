@@ -102,6 +102,10 @@ footer {
   color:black;
 }
 
+header {
+  color: transparent;
+}
+
 h1{
   text-align: center;
   color:black;
