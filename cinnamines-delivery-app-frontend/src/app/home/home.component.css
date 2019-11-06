@@ -1,0 +1,126 @@
+ul{
+  background-color:black;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+
+}
+
+li {
+  display: inline;
+  float: left;
+  margin-top: 8px;
+  font-size: 26px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+
+}
+
+a {
+    padding: 23px;
+    margin-top: 0px;
+    padding-top: 0px;
+    color:wheat;
+    font-style: oblique;
+    float: min-width  50px ;
+  }
+
+#logo {
+      text-align: center;
+      font-size: 100px;
+      height: auto;
+      width: 50%;
+      padding: 1px;
+    }
+
+.banner {
+  margin-top: 10px;
+  margin-bottom: 0px;
+  text-align: center;
+  width: 450px;
+  height: 10%;
+  border: 8px solid rgba(112, 4, 4, 0.815);
+  border-radius:  50px 015px;
+
+}
+
+img {
+  width: 42px;
+  height: auto;
+  margin-top: qpx;
+}
+
+#scooteranchor {
+  margin-top: 0px;
+  padding-top: 0px;
+
+}
+
+#gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: right;
+  width: 1px;
+
+}
+
+div.gallery {
+  margin: 50px;
+  border: 1.2px solid #ccc;
+  float: right;
+  width: 180px;
+  background-color:rgb(70, 50, 15);
+  margin-top: -20px;
+
+}
+
+div.gallery:hover {
+  border: 2px solid black;
+
+}
+
+div.gallery img {
+  width: 189px;
+  height: 189px;
+  border: 2px solid black;
+
+
+}
+
+div.desc {
+  font-style: oblique;
+  color:wheat;
+  padding: 1px;
+  text-align: center;
+  background-color:rgb(70, 50, 15);
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+footer {
+  margin: 30px;
+  color:black;
+}
+
+header {
+  color: transparent;
+}
+
+h1{
+  text-align: center;
+  color:black;
+}
+
+h2{
+  text-align: center;
+  color:black;
+}
+
+h3{
+  text-align: center;
+  color:black;
+}
+
+footer{
+  text-align: center;
+  color:black;
+}
