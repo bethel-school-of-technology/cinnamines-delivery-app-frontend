@@ -6,7 +6,7 @@ body {
 }
 .center {
   margin: auto;
-  width: 80em;
+  width: 80rem;
   }
   @import '~@angular/material/theming';
 
