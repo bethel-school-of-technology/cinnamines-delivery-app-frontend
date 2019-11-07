@@ -3,3 +3,44 @@ mat-form-field,
 textarea {
   width: 100%;
 }
+form{
+  width: 100%;
+}
+mat-card{
+  padding-top: 50px;
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255, 157, 0, 0.794);
+  border: ridge rgb(106, 54, 226);
+  border-radius: 13em/3em;
+  width: 500px;
+  height: 325px;
+  top: 70px;
+  font-size: 25px;
+}
+ul{
+  background-color:black;
+  margin-top: -8px;
+  margin-left: -8px;
+  margin-right: -8px;
+
+}
+
+li {
+  display: inline;
+  float: left;
+  margin-top: 8px;
+  font-size: 26px;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
+
+
+}
+
+a {
+    padding: 23px;
+    margin-top: 0px;
+    padding-top: 0px;
+    color:wheat;
+    font-style: oblique;
+    float: min-width  50px ;
+  }

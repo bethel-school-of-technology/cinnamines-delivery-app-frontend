@@ -1,6 +1,5 @@
-
 <mat-card>
-  <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
+    <form (submit)="onSignup(signupForm)" #signupForm="ngForm">
     <mat-form-field>
       <input matInput name="name" ngModel type="name" placeholder="Name" #nameInput="ngModel" required>
       <mat-error *ngIf="nameInput.invalid">Please enter a name</mat-error>
@@ -10,14 +9,15 @@
       <mat-error *ngIf="emailInput.invalid">Please enter an email</mat-error>
     </mat-form-field>
     <mat-form-field>
-      <input matInput name="phone" ngModel type="phone" placeholder="Phone Number" #phoneInput="ngModel" required>
-      <mat-error *ngIf="phoneInput.invalid">Please enter a phone number</mat-error>
-    </mat-form-field>
-    <mat-form-field>
       <input type="password" name="password" ngModel matInput placeholder="Password" #passwordInput="ngModel" required>
       <mat-error *ngIf="passwordInput.invalid">Please enter a password</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput name="phone" ngModel type="phone" placeholder="Phone Number" #phoneInput="ngModel" required>
+      <mat-error *ngIf="phoneInput.invalid">Please enter a phone number</mat-error>
     </mat-form-field>
     <button mat-raised-button color="primary" type="submit">Sign Up</button>
   </form>
 </mat-card>
+
 

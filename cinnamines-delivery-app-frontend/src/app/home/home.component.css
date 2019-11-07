@@ -11,7 +11,7 @@ li {
   float: left;
   margin-top: 8px;
   font-size: 26px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 
 
 }
@@ -66,25 +66,21 @@ img {
 
 div.gallery {
   margin: 50px;
-  border: 1.2px solid #ccc;
-  float: right;
+  border: 1.3px solid rgb(66, 63, 243);
+  float: left;
   width: 180px;
   background-color:rgb(70, 50, 15);
   margin-top: -20px;
-
 }
 
 div.gallery:hover {
   border: 2px solid black;
-
 }
 
 div.gallery img {
   width: 189px;
   height: 189px;
   border: 2px solid black;
-
-
 }
 
 div.desc {
@@ -93,12 +89,12 @@ div.desc {
   padding: 1px;
   text-align: center;
   background-color:rgb(70, 50, 15);
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
 
 footer {
   margin: 30px;
-  color:black;
+  color:rgba(228, 59, 7, 0.616);
 }
 
 header {
@@ -107,20 +103,20 @@ header {
 
 h1{
   text-align: center;
-  color:black;
+  colo:rgba(228, 59, 7, 0.616);
 }
 
 h2{
   text-align: center;
-  color:black;
+  color:rgba(228, 59, 7, 0.616);
 }
 
 h3{
   text-align: center;
-  color:black;
+  color:rgba(228, 59, 7, 0.616);
 }
 
 footer{
   text-align: center;
-  color:black;
+  color:rgba(228, 59, 7, 0.616);
 }

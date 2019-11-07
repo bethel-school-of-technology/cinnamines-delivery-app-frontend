@@ -1,6 +1,23 @@
-
-
 mat-form-field,
 textarea {
   width: 100%;
 }
+form{
+  width: 100%;
+}
+mat-card{
+  padding-top: 50px;
+  width: 60%;
+  margin: 0 auto;
+  background: rgba(255, 157, 0, 0.794);
+  border:ridge rgb(106, 54, 226);
+  border-width: 37px;
+  border-radius: 15em/4em;
+  width: 700px;
+  height: 325px;
+  top: 54px;
+}
+
+
+
+

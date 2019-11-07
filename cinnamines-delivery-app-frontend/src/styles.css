@@ -2,11 +2,12 @@
 
 html, body { height: 100%; }
 body {
-  font-family: "Indie Flower";
-  background-image: url(../src/assets/images/cin8.jpg) ;
-
+  background-image: url(../src/assets/images/cin8.jpg);
 }
-  .center {
-    margin: auto;
-    width: 80em;
-    }
+.center {
+  margin: auto;
+  width: 80em;
+  }
+  @import '~@angular/material/theming';
+
+

@@ -1,9 +1,11 @@
-
-
-<mat-card>
+<ul>
+ <li><a href="http:\\localhost:4200\Home"style="text-decoration:none;">Home</a></li>
+</ul>
+ <mat-card>
 <form (submit)="onLogIn(loginForm)" #loginForm="ngForm">
 <mat-form-field>
   <input matInput name="email" ngModel type="email" placeholder="E-Mail" #emailInput="ngModel" required email>
+
   <mat-error *ngIf="emailInput.invalid">Please enter a email</mat-error>
 </mat-form-field>
 <mat-form-field>
