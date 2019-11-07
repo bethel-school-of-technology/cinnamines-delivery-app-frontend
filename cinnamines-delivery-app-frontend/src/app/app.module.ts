@@ -9,6 +9,7 @@ import {
   MatToolbarModule, MatExpansionModule
 } from '@angular/material';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
@@ -22,6 +23,8 @@ import { LogOnComponent } from './auth/log-on/log-on.component';
 import { ProfileComponent } from './users/profile/profile.component';
 import { AppRoutingModule } from './app-routing.module';
 import { AuthInterceptor } from './auth/auth-interceptor';
+import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './header/header.component';
 
 
 @NgModule({
@@ -37,6 +40,8 @@ import { AuthInterceptor } from './auth/auth-interceptor';
     LogOnComponent,
     ProfileComponent,
     LogOnComponent,
+    FooterComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
@@ -49,6 +54,7 @@ import { AuthInterceptor } from './auth/auth-interceptor';
     AppRoutingModule,
     MatExpansionModule,
     HttpClientModule,
+    FlexLayoutModule,
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
 

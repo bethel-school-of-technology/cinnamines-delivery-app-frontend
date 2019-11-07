@@ -7,9 +7,10 @@ ul{
 }
 
 li {
-  display: block;
-  float: left;
+  display: inline;
+  /* float: left; float and margin is ignored as display is inline
   margin-top: 0.5rem;
+  */
   font-size: 1.625rem;
   /* font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; */
 }
