@@ -16,6 +16,6 @@
         #content="ngModel"></textarea>
       <mat-error *ngIf="content.invalid">Please enter a valid address</mat-error>
   </mat-form-field>
-  <button mat-raised-button color="primary" type="submit">Submit Order</button>
+  <button (click)="onAddOrder()" mat-raised-button color="primary" type="submit">Submit Order</button>
   </form>
 </mat-card>

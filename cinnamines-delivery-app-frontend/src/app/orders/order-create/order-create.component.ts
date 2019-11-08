@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class OrderCreateComponent implements OnInit {
+  newOrder = '';
+
+  onAddOrder() {
+    alert('Thank you for your order!');
+  }
 
   constructor() { }
 
