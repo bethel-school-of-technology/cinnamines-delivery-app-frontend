@@ -1,18 +1,18 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
-// import { Order } from ' ';
 import { NgForm } from '@angular/forms';
+
 // import { OrdersService } from '';
 
-@Component({
+@Component ({
   selector: 'app-order-create',
   templateUrl: './order-create.component.html',
   styleUrls: ['./order-create.component.css']
 })
 
 export class OrderCreateComponent implements OnInit {
-  enteredTitle = "";
-  enteredContent = "";
+  enteredTitle = '';
+  enteredContent = '';
 
   constructor(public ordersService: OrdersService) {}
 

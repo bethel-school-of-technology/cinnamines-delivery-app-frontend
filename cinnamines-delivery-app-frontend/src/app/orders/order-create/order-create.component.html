@@ -1,7 +1,7 @@
 
 
 <mat-card>
-  <form>
+  <form (submit)='onAddOrder(orderForm)' #orderForm="ngForm">
   <mat-form-field>
     <input matInput type="text" placeholder="Date" name="title" ngModel required #title="ngModel">
     <mat-error *ngIf="title.invalid">Please enter a valid date</mat-error>
@@ -20,6 +20,6 @@
         #content="ngModel"></textarea>
       <mat-error *ngIf="content.invalid">Please enter a valid address</mat-error>
   </mat-form-field>
-  <button (click)="onAddOrder()" mat-raised-button color="primary" type="submit">Submit Order</button>
+  <button mat-raised-button color="primary" type="submit">Submit Order</button>
   </form>
 </mat-card>
