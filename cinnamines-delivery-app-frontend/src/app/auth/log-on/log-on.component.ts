@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { AuthService } from '../auth.service';
-import { Router } from '@angular/router';
 
 
 @Component({
@@ -9,12 +8,8 @@ import { Router } from '@angular/router';
   styleUrls: ['./log-on.component.css']
 })
 export class LogOnComponent  {
-  // email: string;
-  // password: string;
 
-constructor(public authService: AuthService) { }
-
-  // ngOnInit() { }
+constructor(public authService: AuthService) {}
 
   onLogIn(form: NgForm) {
     if (form.invalid) {

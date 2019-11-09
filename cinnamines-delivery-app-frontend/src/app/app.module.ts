@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 import {
   MatInputModule,
   MatCardModule,
@@ -9,7 +9,6 @@ import {
   MatToolbarModule, MatExpansionModule
 } from '@angular/material';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
-import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { OrderCreateComponent } from './orders/order-create/order-create.component';
@@ -54,7 +53,6 @@ import { HeaderComponent } from './header/header.component';
     AppRoutingModule,
     MatExpansionModule,
     HttpClientModule,
-    FlexLayoutModule,
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
 

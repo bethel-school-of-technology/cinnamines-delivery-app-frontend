@@ -1,4 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+
+// import { Order } from ' ';
+import { NgForm } from '@angular/forms';
+// import { OrdersService } from '';
 
 @Component({
   selector: 'app-order-create',
@@ -7,14 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 
 export class OrderCreateComponent implements OnInit {
-  newOrder = '';
+  enteredTitle = "";
+  enteredContent = "";
 
-  onAddOrder() {
-    alert('Thank you for your order!');
+  constructor(public ordersService: OrdersService) {}
+
+  onAddOrder(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.ordersService.addOrder(form.value.title, form.value.content);
+    form.resetForm();
   }
-
-  constructor() { }
-
-  ngOnInit() { }
-
 }
