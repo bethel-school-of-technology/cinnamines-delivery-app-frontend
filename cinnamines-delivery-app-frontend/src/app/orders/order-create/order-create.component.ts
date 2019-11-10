@@ -1,6 +1,7 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 import { NgForm } from '@angular/forms';
+import { OrdersService } from 'src/services/orders.service';
 
 // import { OrdersService } from '';
 
@@ -16,11 +17,13 @@ export class OrderCreateComponent implements OnInit {
 
   constructor(public ordersService: OrdersService) {}
 
-  onAddOrder(form: NgForm) {
-    if (form.invalid) {
-      return;
-    }
-    this.ordersService.addOrder(form.value.title, form.value.content);
-    form.resetForm();
-  }
+  ngOnInit() {}
+
+  // onAddOrder(form: NgForm) {
+  //   if (form.invalid) {
+  //     return;
+  //   }
+  //   this.ordersService.addOrder(form.value.title, form.value.content);
+  //   form.resetForm();
+  // }
 }

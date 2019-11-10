@@ -1,5 +1,7 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
+import { Order } from 'src/app/models/order';
+import { OrdersService } from 'src/services/orders.service';
 
 @Component({
   selector: 'app-order-history',
@@ -13,18 +15,18 @@ export class OrderHistoryComponent implements OnInit, OnDestroy {
   constructor(public ordersService: OrdersService) { }
 
   ngOnInit() {
-    this.ordersService.getOrders();
-    this.ordersSub = this.ordersService.getOrderUpdateListener()
-      .subscribe((orders: Order[]) => {
-        this.orders = orders;
-      });
+    // this.ordersService.getOrders();
+    // this.ordersSub = this.ordersService.getOrderUpdateListener()
+    //   .subscribe((orders: Order[]) => {
+    //     this.orders = orders;
+    //   });
   }
 
-  onDelete(orderId: string) {
-    this.ordersService.deleteOrder(orderId);
-  }
+  // onDelete(orderId: string) {
+  //   this.ordersService.deleteOrder(orderId);
+  // }
 
   ngOnDestroy() {
-    this.ordersSub.unsubscribe();
+    // this.ordersSub.unsubscribe();
   }
 }

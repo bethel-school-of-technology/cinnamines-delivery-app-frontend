@@ -25,6 +25,8 @@ import { AuthInterceptor } from './auth/auth-interceptor';
 import { FooterComponent } from './footer/footer.component';
 import { HeaderComponent } from './header/header.component';
 
+import { UsersService } from 'src/services/users.service';
+import { OrdersService } from 'src/services/orders.service';
 
 @NgModule({
   declarations: [
@@ -54,7 +56,11 @@ import { HeaderComponent } from './header/header.component';
     MatExpansionModule,
     HttpClientModule,
   ],
-  providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true}],
+  providers: [
+    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    UsersService,
+    OrdersService
+  ],
 
   bootstrap: [AppComponent]
 })

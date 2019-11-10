@@ -8,7 +8,7 @@ import { Order } from 'src/app/models/order';
 @Injectable({providedIn: 'root'})
 export class MyService {
   private orders: Order[] = [];
-  private ordersUpdated = new Subject<Order[]>);
+  private ordersUpdated = new Subject<Order[]>();
 
   constructor(private http: HttpClient) {}
 
@@ -27,7 +27,7 @@ export class MyService {
         });
       }))
       .subscribe(transformedOrder => {
-        this.orders = transformedOrders;
+        this.orders = transformedOrder;
         this.ordersUpdated.next([...this.orders]);
       });
   }
@@ -36,21 +36,21 @@ export class MyService {
     return this.ordersUpdated.asObservable();
   }
 
-  addOrder(title: string, content: string) {
-    const order: Order = { id: null, title: title, content: content };
-    this.http
-      .order<{ message: string }>('http://localhost:3400/order', order)
-      .subscribe(responseData => {
-        console.log(responseData.message);
-        this.orders.push(order);
-        this.ordersUpdated.next([...this.orders]);
-      });
-  }
+  // addOrder(title: string, content: string) {
+  //   const order: Order = { id: null, title: title, content: content };
+  //   this.http
+  //     .order<{ message: string }>('http://localhost:3400/order', order)
+  //     .subscribe(responseData => {
+  //       console.log(responseData.message);
+  //       this.orders.push(order);
+  //       this.ordersUpdated.next([...this.orders]);
+  //     });
+  // }
 
-  deleteOrder(orderId: string) {
-    this.http.delete('http://localhost:4000/order' + orderId)
-      .subscribe(() => {
-        console.log('Deleted!');
-      });
-  }
+  // deleteOrder(orderId: string) {
+  //   this.http.delete('http://localhost:4000/order' + orderId)
+  //     .subscribe(() => {
+  //       console.log('Deleted!');
+  //     });
+  // }
 }
