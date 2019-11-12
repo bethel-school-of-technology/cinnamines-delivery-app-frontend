@@ -10,37 +10,39 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
+  // get all users - admin only
   getUsers() {
     return this.http.get<User[]>('http://localhost:4000/users');
   }
 
+  // get one user - user only
   getUser() {
     return this.http.get<User>('http://localhost:4000/users/profile');
   }
 
-  // update one user with all new info (except password)
+  // update one user with all new info (except password) - user only
   updateUser(name, phone, email) {
     return this.http.post<User>('http://localhost:4000/users/updateall', {name, email, phone});
   }
 
-  // update name
+  // update name - user only
   updateName(name) {
     return this.http.post<User>('http://localhost:4000/users/updatename', {name});
   }
 
-  // update email
+  // update email - user only
   updateEmail(email) {
     return this.http.post<User>('http://localhost:4000/users/updateemail', {email});
   }
 
-  // update phone
+  // update phone - user only
   updatePhone(phone) {
     return this.http.post<User>('http://localhost:4000/users/updatephone', {phone});
   }
 
-  // delete user
+  // delete user - admin only
   deleteUser(id) {
-    return this.http.delete<User>('http://localhost:4000/users/updatephone');
+    return this.http.delete<{ message: string }>('http://localhost:4000/users/delete/' + id);
   }
 
 }
