@@ -1,7 +1,7 @@
 
 
 <mat-card>
-  <form (submit)='onAddOrder(orderForm)' #orderForm="ngForm">
+  <form #orderForm="ngForm">
   <mat-form-field>
     <input matInput type="text" placeholder="Date" name="title" ngModel required #title="ngModel">
     <mat-error *ngIf="title.invalid">Please enter a valid date</mat-error>
