@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from 'src/app/models/user';
-import { MyService } from 'src/services/my.service';
-import { HttpClient } from '@angular/common/http';
-import { ActivatedRoute } from '@angular/router';
+import { UsersService } from 'src/services/users.service';
+import { AuthService } from 'src/app/auth/auth.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile',
@@ -10,23 +10,37 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./profile.component.css']
 })
 export class ProfileComponent implements OnInit {
-  private backEndRoute = 'http://localhost:4000';
   user: User;
 
   constructor(
-    private http: HttpClient,
-    private route: ActivatedRoute
+    private usersService: UsersService,
+    private authService: AuthService,
+    private router: Router
   ) { }
 
   ngOnInit() {
-    this.getUser(this.route.snapshot.paramMap.get('id'));
+    // console.log('User id is ' + this.authService.getUserId());
+    // console.log('Admin is ' + this.authService.getAdmin());
+    // console.log('Token is ' + this.authService.getToken());
+    this.getUser();
   }
 
-  getUser(id) {
-    this.http.get<User>(this.backEndRoute + '/users/' + id).subscribe(user => {
-      this.user = user;
-    });
+  getUser() {
+    if (this.authService.getToken()) {
+      if (this.authService.getAdmin() === false) {
+        // need to use interceptor on http requests to add token
+        this.usersService.getUser().subscribe(user => {
+          this.user = user;
+          console.log(user);
+        });
+      } else {
+        console.log('User is a admin, route to admin-profile component');
+        this.router.navigate(['/admin-profile']);
+      }
+    } else {
+      console.log('User not logged in');
+      this.router.navigate(['/logon']);
+    }
   }
-
 
 }

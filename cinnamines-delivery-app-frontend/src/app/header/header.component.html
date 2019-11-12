@@ -15,7 +15,11 @@
       <a mat-button routerLink="/order-history" routerLinkActive="mat-accent">Order History</a>
     </li>
     <li>
-      <a mat-button routerLink="/" routerLinkActive="mat-accent">Sign Out</a>
+      <a mat-button routerLink="/profile" routerLinkActive="mat-accent">Profile</a>
+    </li>
+    <li>
+      <a mat-button color="warn" (click)="onLogout()">Sign Out</a>
+      <!-- <a mat-button routerLink="/" routerLinkActive="mat-accent">Sign Out</a> -->
     </li>
 
   </ul>
