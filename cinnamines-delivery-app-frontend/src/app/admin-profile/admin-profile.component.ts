@@ -41,4 +41,11 @@ export class AdminProfileComponent implements OnInit {
     }
   }
 
+  deleteUser(userId) {
+    this.usersService.deleteUser(userId).subscribe(response => {
+      console.log(response.message);
+      this.getUsers();
+    });
+  }
+
 }
