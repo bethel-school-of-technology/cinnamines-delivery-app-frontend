@@ -1,20 +1,36 @@
-<p>profile works!</p>
+<h1>Here is Your User Profile! Update it if you like!</h1>
 
-<p>
-  User Id: {{user._id}}<br>
-  <!-- <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        order.title
-      </mat-expansion-panel-header>
-      <p>order.content</p>
-      <mat-action-row>
-        <button mat-button color="primary">EDIT</button>
-        <button mat-button color="warn">DELETE</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-  </mat-accordion> -->
-  User Name: {{user.name}}<br>
-  User email: {{user.email}}<br>
-  User Phone: {{user.phone}}<br>
-</p>
+<div>
+  <h2>User Id: {{user._id}}</h2>
+  <h2>User Name: {{user.name}}</h2>
+  <mat-card>
+    <form (submit)="updateName(newNameForm)" #newNameForm="ngForm">
+      <mat-form-field>
+        <input matInput name="name" ngModel type="name" placeholder="New Name" #nameInput="ngModel" required>
+        <mat-error *ngIf="nameInput.invalid">Please enter new name</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Name</button>
+    </form>
+  </mat-card>
+  <h2>User email: {{user.email}}</h2>
+  <mat-card>
+    <form (submit)="updateEmail(newEmailForm)" #newEmailForm="ngForm">
+      <mat-form-field>
+        <input matInput name="email" ngModel type="email" placeholder="New E-Mail" #emailInput="ngModel" required
+          email>
+        <mat-error *ngIf="emailInput.invalid">Please enter new email</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Email</button>
+    </form>
+  </mat-card>
+  <h2>User Phone: {{user.phone}}</h2>
+  <mat-card>
+    <form (submit)="updatePhone(newPhoneForm)" #newPhoneForm="ngForm">
+      <mat-form-field>
+        <input matInput name="phone" ngModel type="phone" placeholder="New Phone Number" #phoneInput="ngModel" required>
+        <mat-error *ngIf="phoneInput.invalid">Please enter new phone number</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Phone</button>
+    </form>
+  </mat-card>
+</div>

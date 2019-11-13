@@ -3,6 +3,7 @@ import { User } from 'src/app/models/user';
 import { UsersService } from 'src/services/users.service';
 import { AuthService } from 'src/app/auth/auth.service';
 import { Router } from '@angular/router';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-profile',
@@ -19,16 +20,12 @@ export class ProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // console.log('User id is ' + this.authService.getUserId());
-    // console.log('Admin is ' + this.authService.getAdmin());
-    // console.log('Token is ' + this.authService.getToken());
     this.getUser();
   }
 
   getUser() {
     if (this.authService.getToken()) {
       if (this.authService.getAdmin() === false) {
-        // need to use interceptor on http requests to add token
         this.usersService.getUser().subscribe(user => {
           this.user = user;
           console.log(user);
@@ -42,5 +39,40 @@ export class ProfileComponent implements OnInit {
       this.router.navigate(['/logon']);
     }
   }
+
+  updateName(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.usersService.updateName(form.value.name).subscribe(response => {
+      console.log(response.message);
+      this.getUser();
+    });
+  }
+
+  updateEmail(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.usersService.updateEmail(form.value.email).subscribe(response => {
+      console.log(response.message);
+      this.getUser();
+    });
+  }
+
+  updatePhone(form: NgForm) {
+    if (form.invalid) {
+      return;
+    }
+    this.usersService.updatePhone(form.value.phone).subscribe(response => {
+      console.log(response.message);
+      this.getUser();
+    });
+  }
+
+  // .subscribe(response => {
+  //   console.log(response.message);
+  //   this.getUsers();
+  // });
 
 }

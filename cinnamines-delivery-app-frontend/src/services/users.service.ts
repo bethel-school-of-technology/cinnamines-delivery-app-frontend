@@ -34,17 +34,17 @@ export class UsersService {
 
   // update name - user only
   updateName(name) {
-    return this.http.post<User>('http://localhost:4000/users/updatename', {name});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updatename', {name});
   }
 
   // update email - user only
   updateEmail(email) {
-    return this.http.post<User>('http://localhost:4000/users/updateemail', {email});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updateemail', {email});
   }
 
   // update phone - user only
   updatePhone(phone) {
-    return this.http.post<User>('http://localhost:4000/users/updatephone', {phone});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updatephone', {phone});
   }
 
   // delete user - admin only
