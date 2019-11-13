@@ -10,5 +10,20 @@ export class OrdersService {
 
   constructor(private http: HttpClient) { }
 
+  getAllOrders() {
+    return this.http.get<Order[]>('http://localhost:4000/orders');
+  }
+
+  getOrdersByStatus() {
+    return this.http.get<Order[]>('http://localhost:4000/orders/status');
+  }
+
+  getOneOrder(orderId) {
+    return this.http.get<Order>('http://localhost:4000/orders/' + orderId);
+  }
+
+  createOrder(qty: string, address: string, delivDate: string) {
+    return this.http.post<{ message: string }>('http://localhost:4000/orders/add', {qty, address, delivDate});
+  }
 
 }

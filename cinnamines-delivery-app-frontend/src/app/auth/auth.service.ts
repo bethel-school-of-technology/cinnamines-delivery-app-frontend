@@ -57,7 +57,7 @@ export class AuthService {
   logout() {
     this.http.post<{ message: string }>('http://localhost:4000/users/logout', {})
       .subscribe(response => {
-        this.token = 'undefined';
+        this.token = undefined;
         this.userId = '';
         this.admin = false;
         console.log(response.message);

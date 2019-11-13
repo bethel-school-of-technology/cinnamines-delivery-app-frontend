@@ -48,6 +48,7 @@ export class ProfileComponent implements OnInit {
       console.log(response.message);
       this.getUser();
     });
+    form.resetForm();
   }
 
   updateEmail(form: NgForm) {
@@ -58,6 +59,7 @@ export class ProfileComponent implements OnInit {
       console.log(response.message);
       this.getUser();
     });
+    form.resetForm();
   }
 
   updatePhone(form: NgForm) {
@@ -68,11 +70,7 @@ export class ProfileComponent implements OnInit {
       console.log(response.message);
       this.getUser();
     });
+    form.resetForm();
   }
-
-  // .subscribe(response => {
-  //   console.log(response.message);
-  //   this.getUsers();
-  // });
 
 }
