@@ -1,17 +1,17 @@
-<p>admin-profile-edit works! Please Update Status When Ready!</p>
+<p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
+  When Ready!</p>
 
 <div>
   <ol>
     <li *ngFor="let order of orders">
       <p>
         Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_Id}}<br>
+        Order UserId: {{order.user_id}}<br>
         Order Quantity: {{order.qty}}<br>
         Order Address: {{order.address}}<br>
         Order Delivery Date: {{order.delivDate}}<br>
         Order Status: {{order.status}}<br>
       </p>
-      <!-- <button>Update Status</button> -->
       <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
@@ -21,7 +21,6 @@
             <mat-panel-description>
               Please Choose a Status
             </mat-panel-description>
-            <!-- Update Status -->
           </mat-expansion-panel-header>
           <button mat-button>Awaiting Confirmation</button>
           <button mat-button>Confirmed</button>
@@ -41,6 +40,16 @@
           </mat-action-row>
         </mat-expansion-panel>
       </mat-accordion>
+      <mat-card>
+        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
+          <mat-form-field>
+            <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
+              required>
+            <mat-error *ngIf="statusInput.invalid">Please enter updated status</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Update Status</button>
+        </form>
+      </mat-card>
     </li>
   </ol>
 </div>

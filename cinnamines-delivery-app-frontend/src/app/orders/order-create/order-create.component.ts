@@ -24,7 +24,7 @@ export class OrderCreateComponent implements OnInit {
 
   onStart() {
     if (this.authService.getToken()) {
-      console.log(this.authService.getToken());
+      // console.log(this.authService.getToken());
       if (this.authService.getAdmin() === false) {
         console.log('User logged in and not admin, create your order!');
       } else {

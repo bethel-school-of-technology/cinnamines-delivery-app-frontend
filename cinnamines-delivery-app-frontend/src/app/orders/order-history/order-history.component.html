@@ -1,15 +1,17 @@
+<p>order-history component works! View all orders with your userId in them!</p>
 
- <mat-accordion>
-   <mat-expansion-panel>
-     <mat-expansion-panel-header>
-       {{ order.title }}
-     </mat-expansion-panel-header>
-      <p>{{ order.content }}</p>
-      <mat-action-row>
-        <button mat-button color="primary">EDIT</button>
-        <button mat-button color="warn" (click)="onDelete(prder.id)">DELETE</button>
-      </mat-action-row>
-      </mat-expansion-panel>
-      </mat-accordion>
-      <p class="info-text mat-body-1" *ngIf="orders.length <= 0">No orders added yet!</p>
-
+<div>
+  <h2>Here is a list of all Orders Associated with your UserID: {{orders[0].user_id}}</h2>
+  <ol>
+    <li *ngFor="let order of orders">
+      <p>
+        Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br>
+        Order Quantity: {{order.qty}}<br>
+        Order Address: {{order.address}}<br>
+        Order Delivery Date: {{order.delivDate}}<br>
+        Order Status: {{order.status}}<br>
+      </p>
+    </li>
+  </ol>
+</div>
