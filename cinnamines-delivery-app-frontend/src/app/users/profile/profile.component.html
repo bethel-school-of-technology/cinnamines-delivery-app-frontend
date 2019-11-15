@@ -1,5 +1,39 @@
+<h1>Here is Your User Profile! Update it if you like!</h1>
 
-<body>
+<div>
+  <h2>User Id: {{user._id}}</h2>
+  <h2>User Name: {{user.name}}</h2>
+  <mat-card>
+    <form (submit)="updateName(newNameForm)" #newNameForm="ngForm">
+      <mat-form-field>
+        <input matInput name="name" ngModel type="name" placeholder="New Name" #nameInput="ngModel" required>
+        <mat-error *ngIf="nameInput.invalid">Please enter new name</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Name</button>
+    </form>
+  </mat-card>
+  <h2>User email: {{user.email}}</h2>
+  <mat-card>
+    <form (submit)="updateEmail(newEmailForm)" #newEmailForm="ngForm">
+      <mat-form-field>
+        <input matInput name="email" ngModel type="email" placeholder="New E-Mail" #emailInput="ngModel" required
+          email>
+        <mat-error *ngIf="emailInput.invalid">Please enter new email</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Email</button>
+    </form>
+  </mat-card>
+  <h2>User Phone: {{user.phone}}</h2>
+  <mat-card>
+    <form (submit)="updatePhone(newPhoneForm)" #newPhoneForm="ngForm">
+      <mat-form-field>
+        <input matInput name="phone" ngModel type="phone" placeholder="New Phone Number" #phoneInput="ngModel" required>
+        <mat-error *ngIf="phoneInput.invalid">Please enter new phone number</mat-error>
+      </mat-form-field>
+      <button mat-raised-button color="primary" type="submit">Update Phone</button>
+    </form>
+  </mat-card>
+</div>
 
 <mat-accordion>
   <mat-expansion-panel>

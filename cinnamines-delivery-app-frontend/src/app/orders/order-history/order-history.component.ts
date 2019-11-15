@@ -2,7 +2,8 @@ import { Component, OnInit, OnDestroy } from '@angular/core';
 import { Subscription } from 'rxjs';
 import { Order } from 'src/app/models/order';
 import { OrdersService } from 'src/services/orders.service';
-import { AuthService } from '../../auth/auth.service';
+import { Router } from '@angular/router';
+import { AuthService } from 'src/app/auth/auth.service';
 
 @Component({
   selector: 'app-order-history',
@@ -15,9 +16,13 @@ export class OrderHistoryComponent implements OnInit, OnDestroy {
   private ordersSub: Subscription;
   private authStatusSub: Subscription;
 
-  constructor(public ordersService: OrdersService, private authService: AuthService) { }
+  constructor(
+    public ordersService: OrdersService,
+    private router: Router,
+    private authService: AuthService) { }
 
   ngOnInit() {
+    this.onStart();
     this.authStatusSub = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {this.userIsAuthenticated = isAuthenticated;
     });
     // this.ordersService.getOrders();
@@ -27,9 +32,23 @@ export class OrderHistoryComponent implements OnInit, OnDestroy {
     //   });
   }
 
-  // onDelete(orderId: string) {
-  //   this.ordersService.deleteOrder(orderId);
-  // }
+  onStart() {
+    if (this.authService.getToken()) {
+      if (this.authService.getAdmin() === false) {
+        console.log('User logged in and not admin, here is your order history!');
+        this.ordersService.getUserOrders().subscribe(orders => {
+          this.orders = orders;
+          console.log(orders);
+        });
+      } else {
+        console.log('User is a admin, route to admin-orders component');
+        this.router.navigate(['/admin-orders']);
+      }
+    } else {
+      console.log('User not logged in');
+      this.router.navigate(['/logon']);
+    }
+  }
 
   ngOnDestroy() {
     // this.ordersSub.unsubscribe();

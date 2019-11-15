@@ -1,1 +1,55 @@
-<p>admin-profile-edit works!</p>
+<p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
+  When Ready!</p>
+
+<div>
+  <ol>
+    <li *ngFor="let order of orders">
+      <p>
+        Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br>
+        Order Quantity: {{order.qty}}<br>
+        Order Address: {{order.address}}<br>
+        Order Delivery Date: {{order.delivDate}}<br>
+        Order Status: {{order.status}}<br>
+      </p>
+      <mat-accordion>
+        <mat-expansion-panel>
+          <mat-expansion-panel-header>
+            <mat-panel-title>
+              Update Status
+            </mat-panel-title>
+            <mat-panel-description>
+              Please Choose a Status
+            </mat-panel-description>
+          </mat-expansion-panel-header>
+          <button mat-button>Awaiting Confirmation</button>
+          <button mat-button>Confirmed</button>
+          <button mat-button>Enroute</button>
+          <button mat-button>Delivered</button>
+          <!-- <mat-form-field>
+            <mat-label>Favorite food</mat-label>
+            <mat-select [(ngModel)]="selectedValue" name="food">
+              <mat-option *ngFor="let food of foods" [value]="food.value">
+                {{food.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <p> Selected food: {{selectedValue}} </p> -->
+          <mat-action-row>
+            <button mat-button color="primary">Update Status</button>
+          </mat-action-row>
+        </mat-expansion-panel>
+      </mat-accordion>
+      <mat-card>
+        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
+          <mat-form-field>
+            <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
+              required>
+            <mat-error *ngIf="statusInput.invalid">Please enter updated status</mat-error>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Update Status</button>
+        </form>
+      </mat-card>
+    </li>
+  </ol>
+</div>

@@ -10,9 +10,16 @@ export class UsersService {
 
   constructor(private http: HttpClient) { }
 
+  getUpdatedUsers() {
+    return this.users;
+  }
+
   // get all users - admin only
   getUsers() {
     return this.http.get<User[]>('http://localhost:4000/users');
+    // .subscribe(users => {
+    //   this.users = users;
+    // });
   }
 
   // get one user - user only
@@ -27,17 +34,17 @@ export class UsersService {
 
   // update name - user only
   updateName(name) {
-    return this.http.post<User>('http://localhost:4000/users/updatename', {name});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updatename', {name});
   }
 
   // update email - user only
   updateEmail(email) {
-    return this.http.post<User>('http://localhost:4000/users/updateemail', {email});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updateemail', {email});
   }
 
   // update phone - user only
   updatePhone(phone) {
-    return this.http.post<User>('http://localhost:4000/users/updatephone', {phone});
+    return this.http.post<{ message: string }>('http://localhost:4000/users/updatephone', {phone});
   }
 
   // delete user - admin only

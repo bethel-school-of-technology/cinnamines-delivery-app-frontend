@@ -1,1 +1,17 @@
-<p>admin-orders works!</p>
+<p>admin-orders works! Here is a list of all orders! Delete one if you like!</p>
+
+<div>
+  <ol>
+    <li *ngFor="let order of orders">
+      <p>
+        Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br>
+        Order Quantity: {{order.qty}}<br>
+        Order Address: {{order.address}}<br>
+        Order Delivery Date: {{order.delivDate}}<br>
+        Order Status: {{order.status}}<br>
+      </p>
+      <button (click)="deleteOrder(order._id)">Delete This Order</button>
+    </li>
+  </ol>
+</div>
