@@ -1,4 +1,4 @@
-<p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
+<p class="pageTitle" >admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
   When Ready!</p>
 
 <div>
@@ -12,7 +12,7 @@
         Order Delivery Date: {{order.delivDate}}<br>
         Order Status: {{order.status}}<br>
       </p>
-      <mat-accordion>
+      <!-- <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -26,20 +26,20 @@
           <button mat-button>Confirmed</button>
           <button mat-button>Enroute</button>
           <button mat-button>Delivered</button>
-          <!-- <mat-form-field>
-            <mat-label>Favorite food</mat-label>
-            <mat-select [(ngModel)]="selectedValue" name="food">
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <p> Selected food: {{selectedValue}} </p> -->
           <mat-action-row>
             <button mat-button color="primary">Update Status</button>
           </mat-action-row>
         </mat-expansion-panel>
-      </mat-accordion>
+      </mat-accordion> -->
+
+      <mat-radio-group aria-label="Edit Delivery Status">
+        <mat-radio-button value="1">Awaiting Confirmation</mat-radio-button>
+        <mat-radio-button value="2">Confirmed</mat-radio-button>
+        <mat-radio-button value="3">Enroute</mat-radio-button>
+        <mat-radio-button value="4">Delivered</mat-radio-button>
+      </mat-radio-group>
+
+
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
           <mat-form-field>
