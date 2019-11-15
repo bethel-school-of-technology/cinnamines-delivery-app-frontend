@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
-import { User } from 'src/app/models/user';
+import { User } from '../models/user';
 import { UsersService } from 'src/services/users.service';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
@@ -11,7 +10,7 @@ import { Router } from '@angular/router';
   styleUrls: ['./admin-profile.component.css']
 })
 export class AdminProfileComponent implements OnInit {
-  users: User[] = [];
+  users: User[];
 
   constructor(
     private usersService: UsersService,
@@ -20,7 +19,6 @@ export class AdminProfileComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    // gets all users
     this.getUsers();
   }
 
@@ -39,6 +37,13 @@ export class AdminProfileComponent implements OnInit {
       console.log('User not logged in');
       this.router.navigate(['/logon']);
     }
+  }
+
+  deleteUser(userId) {
+    this.usersService.deleteUser(userId).subscribe(response => {
+      console.log(response.message);
+      this.getUsers();
+    });
   }
 
 }
