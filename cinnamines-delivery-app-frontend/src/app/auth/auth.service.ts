@@ -48,6 +48,7 @@ export class AuthService {
         this.token = token;
         this.userId = userId;
         this.admin = admin;
+        this.authStatusListener.next(true);
         console.log('Users Id is: ' + userId);
         console.log('Is user a admin: ' + admin);
         console.log('The Token string is: ' + token);

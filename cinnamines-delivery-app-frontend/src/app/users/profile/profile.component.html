@@ -1,20 +1,30 @@
-<p>profile works!</p>
 
-<p>
-  User Id: {{user._id}}<br>
-  <!-- <mat-accordion>
-    <mat-expansion-panel>
-      <mat-expansion-panel-header>
-        order.title
-      </mat-expansion-panel-header>
-      <p>order.content</p>
-      <mat-action-row>
-        <button mat-button color="primary">EDIT</button>
-        <button mat-button color="warn">DELETE</button>
-      </mat-action-row>
-    </mat-expansion-panel>
-  </mat-accordion> -->
-  User Name: {{user.name}}<br>
-  User email: {{user.email}}<br>
-  User Phone: {{user.phone}}<br>
-</p>
+<body>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      User Id: {{user._id}}
+    </mat-expansion-panel-header>
+
+    <mat-action-row class="align">
+
+      User Name: {{user.name}}
+
+    </mat-action-row>
+
+    <mat-action-row class="align">
+      User email: {{user.email}}
+    </mat-action-row>
+
+    <mat-action-row class="align">
+      User Phone: {{user.phone}}
+    </mat-action-row>
+
+    <mat-action-row>
+      <button mat-button color="primary">EDIT</button>
+      <button mat-button color="warn">DELETE</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
+  </body>
