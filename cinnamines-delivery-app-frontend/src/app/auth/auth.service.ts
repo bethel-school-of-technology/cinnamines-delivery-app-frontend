@@ -63,6 +63,7 @@ export class AuthService {
         this.userId = '';
         this.admin = false;
         console.log(response.message);
+        this.authStatusListener.next(false);
         this.router.navigate(['/home']);
       });
   }
