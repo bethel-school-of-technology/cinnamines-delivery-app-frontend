@@ -1,2 +1,15 @@
 
- <p>Order History</p>
+ <mat-accordion>
+   <mat-expansion-panel>
+     <mat-expansion-panel-header>
+       <!-- {{ order.title }} -->
+     </mat-expansion-panel-header>
+      <!-- <p>{{ order.content }}</p> -->
+      <mat-action-row *ngIf='userIsAuthenticated'>
+        <button mat-button color="primary">EDIT</button>
+        <button mat-button color="warn">DELETE</button>
+      </mat-action-row>
+      </mat-expansion-panel>
+      </mat-accordion>
+      <p class="info-text mat-body-1" *ngIf="orders.length <= 0">No orders added yet!</p>
+
