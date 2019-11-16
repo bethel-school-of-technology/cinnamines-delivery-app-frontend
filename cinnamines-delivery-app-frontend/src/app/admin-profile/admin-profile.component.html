@@ -1,17 +1,18 @@
 <p>admin-profile works! Here is a list of all users! You can delete somebody if you do not like them!</p>
-
+<h1>All Users:</h1>
 <div>
-  <ul>
+  <ol>
     <li *ngFor="let user of users">
-      <p>
-        User Id: {{user._id}}<br>
-        User Name: {{user.name}}<br>
-        User email: {{user.email}}<br>
-        User Phone: {{user.phone}}<br>
-      </p>
-      <button (click)="deleteUser(user._id)">Delete This User</button>
+      <div>
+        <!-- User Id: {{user._id}}<br> -->
+        <h4>User Name: {{user.name}}</h4>
+        <h4>User email: {{user.email}}</h4>
+        <h4>User Phone: {{user.phone}}</h4>
+      </div>
+      <button id="deletebutton" mat-raised-button color="primary" (click)="deleteUser(user._id)">Delete This User</button>
+      <button mat-raised-button color="primary" (click)="makeAdmin(user._id)">Make This User A Admin</button>
     </li>
-  </ul>
+  </ol>
 </div>
 
 <div id="errorMessage"></div>

@@ -1,18 +1,20 @@
 <p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
   When Ready!</p>
 
+<h1>Current Orders:</h1>
+
 <div>
   <ol>
     <li *ngFor="let order of orders">
-      <p>
-        Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br>
-        Order Quantity: {{order.qty}}<br>
-        Order Address: {{order.address}}<br>
-        Order Delivery Date: {{order.delivDate}}<br>
-        Order Status: {{order.status}}<br>
-      </p>
-      <mat-accordion>
+      <div>
+        <!-- Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br> -->
+        <h4>Order Quantity: {{order.qty}}</h4>
+        <h4>Order Address: {{order.address}}</h4>
+        <h4>Order Delivery Date: {{order.delivDate}}</h4>
+        <h4>Order Status: {{order.status}}</h4>
+      </div>
+      <!-- <mat-accordion>
         <mat-expansion-panel>
           <mat-expansion-panel-header>
             <mat-panel-title>
@@ -26,20 +28,11 @@
           <button mat-button>Confirmed</button>
           <button mat-button>Enroute</button>
           <button mat-button>Delivered</button>
-          <!-- <mat-form-field>
-            <mat-label>Favorite food</mat-label>
-            <mat-select [(ngModel)]="selectedValue" name="food">
-              <mat-option *ngFor="let food of foods" [value]="food.value">
-                {{food.viewValue}}
-              </mat-option>
-            </mat-select>
-          </mat-form-field>
-          <p> Selected food: {{selectedValue}} </p> -->
           <mat-action-row>
             <button mat-button color="primary">Update Status</button>
           </mat-action-row>
         </mat-expansion-panel>
-      </mat-accordion>
+      </mat-accordion> -->
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
           <mat-form-field>
@@ -49,6 +42,7 @@
           </mat-form-field>
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
+        <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
       </mat-card>
     </li>
   </ol>
