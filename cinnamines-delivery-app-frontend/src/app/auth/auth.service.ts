@@ -1,4 +1,3 @@
-
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router } from '@angular/router';
@@ -12,6 +11,7 @@ export class AuthService {
   public userId: string;
   public admin: boolean;
   private authStatusListener = new Subject<boolean>();
+  private authAdminListener = new Subject<boolean>();
 
   constructor(private http: HttpClient, private router: Router) { }
 
@@ -29,6 +29,10 @@ export class AuthService {
 
   getAuthStatusListener() {
     return this.authStatusListener.asObservable();
+  }
+
+  getAuthAdminListener() {
+    return this.authAdminListener.asObservable();
   }
 
   createUser(name: string, email: string, password: string, phone: string) {
@@ -49,6 +53,9 @@ export class AuthService {
         this.userId = userId;
         this.admin = admin;
         this.authStatusListener.next(true);
+        if (this.admin) {
+          this.authAdminListener.next(true);
+        }
         console.log('Users Id is: ' + userId);
         console.log('Is user a admin: ' + admin);
         console.log('The Token string is: ' + token);
@@ -64,24 +71,9 @@ export class AuthService {
         this.admin = false;
         console.log(response.message);
         this.authStatusListener.next(false);
+        this.authAdminListener.next(false);
         this.router.navigate(['/home']);
       });
   }
-
-  // createUser(email: string, name: string, phone: string, password: string) {
-  //   const authData: AuthData = { email: email, name: name, phone: phone, password: password};
-  //   this.http.post('http://localhost:4000/users/signup', authData)
-  //   .subscribe(response => {
-  //     console.log(response);
-  //   });
-  // }
-
-  // login(email: string, name: string, phone: string, password: string) {
-  // const authData: AuthData = { email: email, name: name, phone: phone, password: password };
-  // this.http.post<{token: string}>('http://localhost:4000/users/login', authData)
-  //   .subscribe(response => {
-  //     const token = response.token;
-  //     this.token = token;
-  // });
 
 }

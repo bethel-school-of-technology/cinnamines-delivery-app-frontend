@@ -25,15 +25,15 @@ export class ProfileComponent implements OnInit {
 
   getUser() {
     if (this.authService.getToken()) {
-      if (this.authService.getAdmin() === false) {
+      // if (this.authService.getAdmin() === false) {
         this.usersService.getUser().subscribe(user => {
           this.user = user;
           console.log(user);
         });
-      } else {
-        console.log('User is a admin, route to admin-profile component');
-        this.router.navigate(['/admin-profile']);
-      }
+      // } else {
+      //   console.log('User is a admin, route to admin-profile component');
+      //   this.router.navigate(['/admin-profile']);
+      // }
     } else {
       console.log('User not logged in');
       this.router.navigate(['/logon']);

@@ -11,13 +11,18 @@ import { AuthService } from '../auth/auth.service';
 export class HeaderComponent implements OnInit {
   userIsAuthenticated = false;
   public authListenerSubs: Subscription;
+  userIsAdmin = false;
+  public authListenerAdminSubs: Subscription;
 
-  constructor(public authService: AuthService) {}
+  constructor(public authService: AuthService) { }
 
   ngOnInit() {
     this.authListenerSubs = this.authService.getAuthStatusListener().subscribe(isAuthenticated => {
       this.userIsAuthenticated = isAuthenticated;
-  });
+    });
+    this.authListenerAdminSubs = this.authService.getAuthAdminListener().subscribe(isAdmin => {
+      this.userIsAdmin = isAdmin;
+    });
   }
 
   onLogout() {
