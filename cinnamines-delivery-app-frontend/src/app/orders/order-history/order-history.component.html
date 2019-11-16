@@ -1,17 +1,17 @@
 <p>order-history component works! View all orders with your userId in them!</p>
 
 <div>
-  <h2>Here is a list of all Orders Associated with your UserID: {{orders[0].user_id}}</h2>
+  <h1>Your Order History:</h1>
   <ol>
     <li *ngFor="let order of orders">
-      <p>
-        Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br>
-        Order Quantity: {{order.qty}}<br>
-        Order Address: {{order.address}}<br>
-        Order Delivery Date: {{order.delivDate}}<br>
-        Order Status: {{order.status}}<br>
-      </p>
+      <div>
+        <!-- Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br> -->
+        <h3>Order Quantity: {{order.qty}}</h3>
+        <h3>Order Address: {{order.address}}</h3>
+        <h3>Order Delivery Date: {{order.delivDate}}</h3>
+        <h3>Order Status: {{order.status}}</h3><br>
+        </div>
     </li>
   </ol>
 </div>
