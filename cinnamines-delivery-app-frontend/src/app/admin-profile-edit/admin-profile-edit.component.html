@@ -32,12 +32,20 @@
         </mat-expansion-panel>
       </mat-accordion> -->
 
-      <mat-radio-group aria-label="Edit Delivery Status">
-        <mat-radio-button value="1">Awaiting Confirmation</mat-radio-button>
-        <mat-radio-button value="2">Confirmed</mat-radio-button>
-        <mat-radio-button value="3">Enroute</mat-radio-button>
-        <mat-radio-button value="4">Delivered</mat-radio-button>
+      <!-- select status -->
+      <label id="radio-group-label">Edit Status</label>
+      <mat-radio-group
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        [(ngModel)]="newStatus">
+        <mat-radio-button
+          class="radio-button"
+          *ngFor="let status of statusOption"
+          [value]="season">
+          {{status}}
+        </mat-radio-button>
       </mat-radio-group>
+      <div>The present status is: {{newStatus}}</div>
 
 
       <mat-card>

@@ -57,3 +57,13 @@ export class AdminProfileEditComponent implements OnInit {
 
 
 }
+
+export class SetStatusRadio {
+  newStatus: string;
+  statusOption: string[] = [
+    'Awating Confirmation',
+    'Confirmed',
+    'Enroute',
+    'Delivered'
+  ];
+}
