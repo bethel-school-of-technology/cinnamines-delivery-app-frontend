@@ -47,6 +47,10 @@ export class UsersService {
     return this.http.post<{ message: string }>('http://localhost:4000/users/updatephone', {phone});
   }
 
+  makeAdmin(id) {
+    return this.http.post<{ message: string }>('http://localhost:4000/users/makeAdmin', {id});
+  }
+
   // delete user - admin only
   deleteUser(id) {
     return this.http.delete<{ message: string }>('http://localhost:4000/users/delete/' + id);

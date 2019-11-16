@@ -2,26 +2,31 @@
   <span><a routerLink="/">E's Cinna-MinE's!</a></span>
   <span class="spacer"></span>
   <ul>
+    <!-- not logged in -->
     <li *ngIf='!userIsAuthenticated'>
       <a mat-button routerLink="/signup" routerLinkActive="mat-accent">Sign Up</a>
     </li>
     <li *ngIf='!userIsAuthenticated'>
       <a mat-button routerLink="/logon" routerLinkActive="mat-accent">Log In</a>
     </li>
+    <!-- user logged in, checks for admin -->
     <li *ngIf='userIsAuthenticated'>
-      <a mat-button routerLink="/order-create" routerLinkActive="mat-accent">New Order</a>
+      <a *ngIf='!userIsAdmin' mat-button routerLink="/order-create" routerLinkActive="mat-accent">New Order</a>
+      <a *ngIf='userIsAdmin' mat-button routerLink="/admin-profile-edit" routerLinkActive="mat-accent">Current Orders</a>
     </li>
     <li *ngIf='userIsAuthenticated'>
-      <a mat-button routerLink="/order-history" routerLinkActive="mat-accent">Order History</a>
+      <a *ngIf='!userIsAdmin' mat-button routerLink="/order-history" routerLinkActive="mat-accent">Order History</a>
+      <a *ngIf='userIsAdmin' mat-button routerLink="/admin-orders" routerLinkActive="mat-accent">All Orders</a>
     </li>
     <li *ngIf='userIsAuthenticated'>
-      <a mat-button routerLink="/profile" routerLinkActive="mat-accent">Profile</a>
+      <a *ngIf='!userIsAdmin' mat-button routerLink="/profile" routerLinkActive="mat-accent">Profile</a>
+      <a *ngIf='userIsAdmin' mat-button routerLink="/admin-profile" routerLinkActive="mat-accent">All Users</a>
+    </li>
+    <li *ngIf='userIsAdmin'>
+      <a mat-button routerLink="/profile" routerLinkActive="mat-accent">Admin Profile</a>
     </li>
     <li *ngIf='userIsAuthenticated'>
       <a mat-button color="warn" (click)="onLogout()">Sign Out</a>
-      <!-- <a mat-button routerLink="/" routerLinkActive="mat-accent">Sign Out</a> -->
     </li>
-
   </ul>
-
 </mat-toolbar>

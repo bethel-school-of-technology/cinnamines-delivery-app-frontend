@@ -46,4 +46,11 @@ export class AdminProfileComponent implements OnInit {
     });
   }
 
+  makeAdmin(userId) {
+    this.usersService.makeAdmin(userId).subscribe(response => {
+      console.log(response.message);
+      this.getUsers();
+    });
+  }
+
 }
