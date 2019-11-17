@@ -2,3 +2,8 @@ html, body { height: 100%; }
 body {
   background-image: url(../src/assets/images/cin8.jpg);
 }
+.mat-toolbar.mat-toolbar
+{
+  background-color: rgba(127, 255, 212, 0);
+}
+
