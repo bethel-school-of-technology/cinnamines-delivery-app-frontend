@@ -17,3 +17,11 @@ a {
 .spacer {
   flex: 1 1 auto;
 }
+header {
+  background-color: blanchedalmond;
+}
+img
+ {
+   width: 10rem;
+   height: 4rem;
+ }

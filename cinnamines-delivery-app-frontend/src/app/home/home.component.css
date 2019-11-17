@@ -1,35 +1,3 @@
-/* ul{
-  background-color:black;
-  margin-top: -8px;
-  margin-left: -8px;
-  margin-right: -8px;
-
-} */
-
-li {
-  display: inline;
-
-  /* margin-top: 0.5rem; */
-
-  font-size: 1.625rem;
-}
-a {
-    padding: 23px;
-    margin-top: 0px;
-    padding-top: 0px;
-    color:wheat;
-    font-style: oblique;
-    float: min-width  3.125rem;
-  }
-
-#logo {
-      text-align: center;
-      font-size: 6.25rem;
-      height: auto;
-      width: 50%;
-      padding: 1px;
-    }
-
 .banner {
   margin-top: 0.6rem;
   margin-bottom: 0px;
@@ -82,31 +50,16 @@ div.desc {
   background-color:rgb(70, 50, 15);
 }
 
-footer {
-  margin: 1.875rem;
-  color:rgba(228, 59, 7, 0.616);
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+
+  width: 33.33%;
+  padding: 5px;
 }
 
-header {
-  color: transparent;
-}
-
-h1{
-  text-align: center;
-  color:rgba(228, 59, 7, 0.616);
-}
-
-h2{
-  text-align: center;
-  color:rgba(228, 59, 7, 0.616);
-}
-
-h3{
-  text-align: center;
-  color:rgba(228, 59, 7, 0.616);
-}
-
-footer{
-  text-align: center;
-  color:rgba(228, 59, 7, 0.616);
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
