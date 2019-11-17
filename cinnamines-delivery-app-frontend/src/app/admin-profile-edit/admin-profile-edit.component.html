@@ -32,22 +32,21 @@
         </mat-expansion-panel>
       </mat-accordion> -->
 
-      <!-- select status -->
+      <!-- select new status -->
       <label id="radio-group-label">Edit Status</label>
       <mat-radio-group
         aria-labelledby="radio-group-label"
         class="radio-group"
-        [(ngModel)]="newStatus">
+        [(ngModel)] = "newStatus">
         <mat-radio-button
           class="radio-button"
           *ngFor="let status of statusOption"
-          [value]="season">
+          [value]="status">
           {{status}}
         </mat-radio-button>
       </mat-radio-group>
-      <div>The present status is: {{newStatus}}</div>
-
-
+     
+      <!-- submit new status  -->
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
           <mat-form-field>

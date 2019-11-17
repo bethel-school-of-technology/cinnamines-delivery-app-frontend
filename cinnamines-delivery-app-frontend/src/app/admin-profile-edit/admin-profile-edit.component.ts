@@ -13,6 +13,13 @@ import { MatRadioModule } from '@angular/material/radio';
 })
 export class AdminProfileEditComponent implements OnInit {
   orders: Order[];
+  newStatus: string;
+  statusOption: string[] = [
+    'Awaiting Confirmation',
+    'Confirmed',
+    'Enroute',
+    'Delivered'
+  ];
 
   constructor(
     private ordersService: OrdersService,
@@ -58,12 +65,12 @@ export class AdminProfileEditComponent implements OnInit {
 
 }
 
-export class SetStatusRadio {
-  newStatus: string;
-  statusOption: string[] = [
-    'Awating Confirmation',
-    'Confirmed',
-    'Enroute',
-    'Delivered'
-  ];
-}
+// export class SetStatusRadio {
+//   newStatus: string;
+//   statusOption: string[] = [
+//     'Awating Confirmation',
+//     'Confirmed',
+//     'Enroute',
+//     'Delivered'
+//   ];
+// }
