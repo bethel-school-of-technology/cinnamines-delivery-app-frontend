@@ -1,20 +1,146 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+ .box {
+  width: 100%;
+  height: 30rem;
+  border-radius: .5rem;
+  box-shadow: 0 2px 30px rgba(black, .2);
+  background: lighten(#f0f4c3, 10%);
+  position: relative;
+  overflow:hidden;
+  transform: translate3d(0, 0, 0);
 }
 
-.container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  align-content: center;
+.wave {
+  opacity: .4;
+  position: absolute;
+  top: 3%;
+  left: 50%;
+  background: rgba(0, 170, 255, 0.719);
+  width: 500px;
+  height: 500px;
+  margin-left: -250px;
+  margin-top: -250px;
+  transform-origin: 50% 48%;
+  border-radius: 43%;
+  animation: drift 3000ms infinite linear;
 }
 
-.item {
-  padding: 30px;
-  margin: 30px;
-  flex: 0 1 20%;
+.wave.-three {
+  animation: drift 5000ms infinite linear;
+}
+
+.wave.-two {
+  animation: drift 7000ms infinite linear;
+  opacity: .1;
+  background: yellow;
+}
+
+.box:after {
+  content: '';
+  display: block;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(#e8a, 1), rgba(#def, 0) 80%, rgba(white, .5));
+  z-index: 11;
+  transform: translate3d(0, 0, 0);
+}
+
+  
+@keyframes drift {
+  from { transform: rotate(0deg); }
+  from { transform: rotate(360deg); }
+} 
+
+/* this is where all the other css starts outside of logo */
+h1{
+  color: rgba(3, 12, 0, 0.938);
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+  text-overflow: clip;
+  text-align: center;
+}
+h2{
+  color: rgb(17, 1, 1);
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 3.5rem;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+  text-overflow: clip;
+  text-align: center;
+}
+
+img {
+  width: 2.625rem;
+  height: auto;
+  margin-top: 1rem;
+}
+
+#gallery {
+  margin: 3.125rem;
+  border: 1px solid #ccc;
+  float: right;
+  width: 1px;
+
+}
+
+div.gallery {
+  margin: 2.7rem;
+  border: .14rem solid wheat;
+  float: left;
+  width: 11.25rem;
+  background-color:  rgb(70, 50, 15);
+  margin-top: -10rem;
+  color:wheat;
+  border: solid .3rem;
+  border-style: ridge;
+
+}
+
+div.gallery:hover {
+  border: 2px solid black;
+}
+
+div.gallery img {
+  width: 13.8rem;
+  height: 13.8rem;
+  border: 2px solid black;
+  border-radius: 5rem 2rem;
+}
+
+div.desc {
+  font-style: oblique;
+  color:wheat;
+  padding: 1px;
+  text-align: center;
+  background-color:rgb(70, 50, 15);
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: .85rem;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+  text-overflow: clip;
+  text-align: center;
+}
+
+/* Three image containers (use 25% for four, and 50% for two, etc) */
+.column {
+
+  width: 33.33%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
 }
