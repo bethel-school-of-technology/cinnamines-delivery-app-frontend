@@ -5,6 +5,10 @@ import { Router } from '@angular/router';
 import { AuthData } from './auth-data-model';
 import { Subject } from 'rxjs';
 
+import { environment } from 'src/environments/environment';
+
+const BACKEND_URL = environment.apiUrl + '/users';
+
 @Injectable({ providedIn: 'root' })
 export class AuthService {
   public token: string;
@@ -36,7 +40,7 @@ export class AuthService {
   }
 
   createUser(name: string, email: string, password: string, phone: string) {
-    this.http.post<{ message: string }>('http://localhost:4000/users/signup', { name, email, password, phone })
+    this.http.post<{ message: string }>(BACKEND_URL + '/signup', { name, email, password, phone })
       .subscribe(response => {
         console.log(response.message);
         this.router.navigate(['/logon']);
@@ -44,7 +48,8 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    this.http.post<{ token: string, userId: string, admin: boolean }>('http://localhost:4000/users/login', { email, password })
+    this.http.post<{ token: string, userId: string, admin: boolean }>(BACKEND_URL + '/login', { email, password })
+
       .subscribe(response => {
         const token = response.token;
         const userId = response.userId;
@@ -64,7 +69,7 @@ export class AuthService {
   }
 
   logout() {
-    this.http.post<{ message: string }>('http://localhost:4000/users/logout', {})
+    this.http.post<{ message: string }>(BACKEND_URL + '/logout', {})
       .subscribe(response => {
         this.token = undefined;
         this.userId = '';
