@@ -69,7 +69,7 @@ h2{
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
-  font-size: 2rem;
+  font-size: 3.5rem;
   text-shadow: 0 1px 0 rgba(black, .1);
   text-indent: .3em;
   text-overflow: clip;
@@ -97,6 +97,9 @@ div.gallery {
   width: 11.25rem;
   background-color:  rgb(70, 50, 15);
   margin-top: -10rem;
+  color:wheat;
+  border: solid .3rem;
+  border-style: ridge;
 
 }
 

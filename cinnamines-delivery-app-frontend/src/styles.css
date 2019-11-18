@@ -1,4 +1,3 @@
-html, body { height: 100%; }
 body {
   background-image: url(../src/assets/images/cin8.jpg);
 }
@@ -6,19 +5,11 @@ body {
 {
   margin-top: 1.4rem;
   background-color: rgba(127, 255, 212, 0);
-
-}
-
-img
-{
-  margin-top: .3rem;
   padding: .12rem;
 }
-
 .mat-button-wrapper
 {
   background-color: rgb(70, 50, 15);
-  font-family: Arial, Helvetica, sans-serif;
   color: wheat;
   margin: 1rem;
   font-style: italic;
@@ -26,12 +17,7 @@ img
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
-  text-indent: .3em;
-  text-overflow: clip;
-  text-align: center;
 }
-
 .mat-button.mat-button
 {
   background-color: rgb(70, 50, 15);
@@ -41,15 +27,44 @@ img
   background-color:rgb(70, 50, 15);
   border-radius: 5rem 2rem;
   padding: .4rem;
-
 }
-.mat-form.matform
+.mat-form.mat-form
+{
+  color: wheat;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+}
+mat-card.mat-card
 {
   background-color: rgb(70, 50, 15);
-  color:wheat;
   border: solid .3rem;
   border-style: ridge;
-  background-color:rgb(70, 50, 15);
-  border-radius: 5rem 2rem;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
   padding: .4rem;
 }
+.mat-form-field-infix
+{
+  font-family: Arial, Helvetica, sans-serif;
+  color: wheat;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+}
+ .mat-raised-button.mat-raised-button.mat-button-base.mat-primary
+{
+    background-color: rgb(70, 50, 15);
+    border-color:rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+}
+  
+  

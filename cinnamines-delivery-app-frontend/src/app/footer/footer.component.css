@@ -1,102 +1,78 @@
-footer {
-  text-align: center;
-  color: snow;
-}
-
-
-
 h1{
-  text-align: center;
   color:rgb(42, 20, 236);
   font-family:Helvetica;
   font-style: bold;
   background-color: wheat;
-  width: 40%;
-  align-content: center;
+  width: 30%;
   border: solid .3rem;
   background-color:wheat;
-  border-radius: 5rem 2rem;
-  ;
-
+  border-radius: 1rem 1rem;
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
 }
-
 h2{
-  text-align: center;
-  width: 55rem;
+  width: 100%;
   color:wheat;
   border: solid .3rem;
   border-style: ridge;
   background-color: rgb(70, 50, 15);
-  border-radius: 5rem 2rem;
+  border-radius: .5rem .5rem;
   font-style: italic;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
+  text-shadow: 0 .1rem 0 rgba(black, .1);
   text-indent: .3em;
   text-overflow: clip;
   text-align: center;
 
 }
-
 h3{
   text-align: center;
-  width: 50rem;
+  width: 100%;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
   background-color: rgb(70, 50, 15);
-  border-radius: 5rem 2rem;
+  border-radius: .5rem .5rem;
   font-style: italic;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
-  text-indent: .3em;
-  text-overflow: clip;
-  text-align: center;
 }
-
 h4{
   text-align: center;
-  width: 45rem;
+  width: 100%;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
   background-color: rgb(70, 50, 15);
-  border-radius: 5rem 2rem;
+  border-radius: .5rem .5rem;
   font-style: italic;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
-  text-indent: .3em;
-  text-overflow: clip;
-  text-align: center;
-
-
 }
-
 h5{
   text-align: center;
-  width: 40rem;
+  width: 100%;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
   background-color: rgb(70, 50, 15);
-  border-radius: 5rem 2rem;
+  border-radius: .5rem .5rem;
   font-style: italic;
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
-  text-indent: .3em;
-  text-overflow: clip;
-  text-align: center;
-
+ 
 }
 
