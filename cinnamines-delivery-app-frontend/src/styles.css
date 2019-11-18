@@ -21,9 +21,15 @@ img
   font-family: Arial, Helvetica, sans-serif;
   color: wheat;
   margin: 1rem;
-  font-family: Arial, Helvetica, sans-serif;
   font-style: italic;
-  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+  text-shadow: 0 1px 0 rgba(black, .1);
+  text-indent: .3em;
+  text-overflow: clip;
+  text-align: center;
 }
 
 .mat-button.mat-button
@@ -34,6 +40,16 @@ img
   border-style: ridge;
   background-color:rgb(70, 50, 15);
   border-radius: 5rem 2rem;
-  padding: .7rem;
+  padding: .4rem;
 
+}
+.mat-form.matform
+{
+  background-color: rgb(70, 50, 15);
+  color:wheat;
+  border: solid .3rem;
+  border-style: ridge;
+  background-color:rgb(70, 50, 15);
+  border-radius: 5rem 2rem;
+  padding: .4rem;
 }
