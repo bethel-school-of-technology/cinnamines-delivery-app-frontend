@@ -4,6 +4,36 @@ body {
 }
 .mat-toolbar.mat-toolbar
 {
+  margin-top: 1.4rem;
   background-color: rgba(127, 255, 212, 0);
+
 }
 
+img
+{
+  margin-top: .3rem;
+  padding: .12rem;
+}
+
+.mat-button-wrapper
+{
+  background-color: rgb(70, 50, 15);
+  font-family: Arial, Helvetica, sans-serif;
+  color: wheat;
+  margin: 1rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.mat-button.mat-button
+{
+  background-color: rgb(70, 50, 15);
+  color:wheat;
+  border: solid .3rem;
+  border-style: ridge;
+  background-color:rgb(70, 50, 15);
+  border-radius: 5rem 2rem;
+  padding: .7rem;
+
+}

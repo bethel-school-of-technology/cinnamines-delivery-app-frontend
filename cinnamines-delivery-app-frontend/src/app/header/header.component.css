@@ -23,5 +23,8 @@ header {
 img
  {
    width: 10rem;
-   height: 4rem;
+   height: 3.4rem;
+   border: solid .25rem;
+   border-color:rgb(70, 50, 15);
+   border-radius: 5rem 2rem;
  }
