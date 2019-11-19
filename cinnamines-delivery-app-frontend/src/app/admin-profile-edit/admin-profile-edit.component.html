@@ -1,4 +1,4 @@
-<p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
+<p class="pageTitle" >admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
   When Ready!</p>
 
 <h1>Current Orders:</h1>
@@ -6,40 +6,38 @@
 <div>
   <ol>
     <li *ngFor="let order of orders">
-      <div>
-        <!-- Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br> -->
-        <h4>Order Quantity: {{order.qty}}</h4>
-        <h4>Order Address: {{order.address}}</h4>
-        <h4>Order Delivery Date: {{order.delivDate}}</h4>
-        <h4>Order Status: {{order.status}}</h4>
-      </div>
-      <!-- <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Update Status
-            </mat-panel-title>
-            <mat-panel-description>
-              Please Choose a Status
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <button mat-button>Awaiting Confirmation</button>
-          <button mat-button>Confirmed</button>
-          <button mat-button>Enroute</button>
-          <button mat-button>Delivered</button>
-          <mat-action-row>
-            <button mat-button color="primary">Update Status</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-      </mat-accordion> -->
+      <p>
+        Order Id: {{order._id}}<br>
+        Order UserId: {{order.user_id}}<br>
+        Order Quantity: {{order.qty}}<br>
+        Order Address: {{order.address}}<br>
+        Order Delivery Date: {{order.delivDate}}<br>
+        Order Status: {{order.status}}<br>
+      </p>
+     
+      <!-- select new status -->
+
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-          <mat-form-field>
-            <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
-              required>
-            <mat-error *ngIf="statusInput.invalid">Please enter updated status</mat-error>
-          </mat-form-field>
+      
+      <label id="radio-group-label">Edit Status</label>
+      <mat-radio-group
+        [(ngModel)]="status"
+        name = "status"
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        >
+        <mat-radio-button
+          class="radio-button"
+          *ngFor="let status of statusOption"
+          [value]="status">
+          {{status}}
+          >
+        </mat-radio-button>
+      </mat-radio-group>
+     
+      <!-- submit new status  -->
+        
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
         <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>

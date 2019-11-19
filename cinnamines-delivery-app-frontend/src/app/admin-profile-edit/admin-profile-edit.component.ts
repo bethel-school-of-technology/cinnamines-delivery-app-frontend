@@ -4,6 +4,10 @@ import { OrdersService } from 'src/services/orders.service';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
+import { MatRadioModule } from '@angular/material/radio';
+import { strictEqual } from 'assert';
+import { stringify } from 'querystring';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-admin-profile-edit',
@@ -12,6 +16,13 @@ import { NgForm } from '@angular/forms';
 })
 export class AdminProfileEditComponent implements OnInit {
   orders: Order[];
+  status: string;
+  statusOption: string[] = [
+    'Awaiting Confirmation',
+    'Confirmed',
+    'Enroute',
+    'Delivered'
+  ];
 
   constructor(
     private ordersService: OrdersService,
@@ -60,3 +71,4 @@ export class AdminProfileEditComponent implements OnInit {
 
 
 }
+

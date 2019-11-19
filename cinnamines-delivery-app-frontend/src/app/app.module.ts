@@ -6,8 +6,12 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule, MatExpansionModule
+  MatToolbarModule,
+  MatExpansionModule,
 } from '@angular/material';
+import {MatRadioModule} from '@angular/material/radio';
+
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -54,6 +58,7 @@ import { OrdersService } from 'src/services/orders.service';
     MatToolbarModule,
     AppRoutingModule,
     MatExpansionModule,
+    MatRadioModule,
     HttpClientModule,
   ],
   providers: [
