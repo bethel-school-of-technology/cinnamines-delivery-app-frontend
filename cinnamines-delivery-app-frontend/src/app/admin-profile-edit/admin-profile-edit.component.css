@@ -1,1 +1,37 @@
 
+mat-form-field,
+textarea {
+  width: fit-content;
+}
+form{
+  width: fit-content;
+ } 
+ h1{
+    background-color: rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    background-color: rgba(0, 170, 255, 0.719);
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+    width: fit-content;
+}
+
+h4{
+    background-color: rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    background-color: rgba(0, 170, 255, 0.719);
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+    width: fit-content;
+  }
+  
+  h2{
+    background-color: rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    background-color: rgba(0, 170, 255, 0.719);
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+    width: fit-content;
+}

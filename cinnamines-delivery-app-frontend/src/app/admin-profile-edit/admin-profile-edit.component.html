@@ -1,39 +1,32 @@
-<p>admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
-  When Ready!</p>
-
 <h1>Current Orders:</h1>
 
 <div>
   <ol>
     <li *ngFor="let order of orders">
       <div>
-        <!-- Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br> -->
         <h4>Order Quantity: {{order.qty}}</h4>
         <h4>Order Address: {{order.address}}</h4>
         <h4>Order Delivery Date: {{order.delivDate}}</h4>
         <h4>Order Status: {{order.status}}</h4>
       </div>
-      <!-- <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Update Status
-            </mat-panel-title>
-            <mat-panel-description>
-              Please Choose a Status
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <button mat-button>Awaiting Confirmation</button>
-          <button mat-button>Confirmed</button>
-          <button mat-button>Enroute</button>
-          <button mat-button>Delivered</button>
-          <mat-action-row>
-            <button mat-button color="primary">Update Status</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-      </mat-accordion> -->
+
       <mat-card>
+        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
+          <mat-form-field>
+            <mat-label>New Status</mat-label>
+            <mat-select ngModel name="status" type="status">
+              <mat-option value="Awaiting Confirmation">Awaiting Confirmation</mat-option>
+              <mat-option value="Confirmed">Confirmed</mat-option>
+              <mat-option value="Enroute">Enroute</mat-option>
+              <mat-option value="Delivered">Delivered</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <button mat-raised-button color="primary" type="submit">Update Status</button>
+        </form>
+        <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
+      </mat-card>
+
+      <!-- <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
           <mat-form-field>
             <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
@@ -43,7 +36,7 @@
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
         <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
-      </mat-card>
+      </mat-card> -->
     </li>
   </ol>
 </div>

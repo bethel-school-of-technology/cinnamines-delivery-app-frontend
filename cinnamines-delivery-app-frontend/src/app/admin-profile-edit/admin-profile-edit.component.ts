@@ -12,6 +12,7 @@ import { NgForm } from '@angular/forms';
 })
 export class AdminProfileEditComponent implements OnInit {
   orders: Order[];
+  newStatus: string;
 
   constructor(
     private ordersService: OrdersService,
