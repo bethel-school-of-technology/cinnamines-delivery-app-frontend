@@ -1,16 +1,20 @@
  .box {
   width: 100%;
-  height: 30rem;
+  /*  */
+  height: fit-content;
   border-radius: .5rem;
   box-shadow: 0 2px 30px rgba(black, .2);
   background: lighten(#f0f4c3, 10%);
   position: relative;
   overflow:hidden;
   transform: translate3d(0, 0, 0);
+  /*  */
+  padding-bottom: 5rem;
 }
 
 .wave {
-  opacity: .4;
+  /*  */
+  opacity: .25;
   position: absolute;
   top: 3%;
   left: 50%;
@@ -46,11 +50,11 @@
   transform: translate3d(0, 0, 0);
 }
 
-  
+
 @keyframes drift {
   from { transform: rotate(0deg); }
   from { transform: rotate(360deg); }
-} 
+}
 
 /* this is where all the other css starts outside of logo */
 h1{
@@ -58,22 +62,28 @@ h1{
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
-  font-size: 1rem;
+  /*  */
+  font-size: 1.7rem;
   text-shadow: 0 1px 0 rgba(black, .1);
   text-indent: .3em;
   text-overflow: clip;
   text-align: center;
+  /*  */
+  font-weight: bolder;
 }
 h2{
   color: rgb(17, 1, 1);
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
-  letter-spacing: .4em;
-  font-size: 3.5rem;
+  letter-spacing: .2em;
+  /*  */
+  font-size: 4rem;
   text-shadow: 0 1px 0 rgba(black, .1);
   text-indent: .3em;
   text-overflow: clip;
   text-align: center;
+  /*  */
+  font-weight: bolder;
 }
 
 img {
@@ -96,7 +106,8 @@ div.gallery {
   float: left;
   width: 11.25rem;
   background-color:  rgb(70, 50, 15);
-  margin-top: -10rem;
+  /*  */
+  margin-top: -1rem;
   color:wheat;
   border: solid .3rem;
   border-style: ridge;
@@ -104,7 +115,8 @@ div.gallery {
 }
 
 div.gallery:hover {
-  border: 2px solid black;
+  /*  */
+  border: .3rem solid black;
 }
 
 div.gallery img {

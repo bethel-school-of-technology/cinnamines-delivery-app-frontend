@@ -1,12 +1,14 @@
-
-li {
-  display: inline-block;
+mat-toolbar {
+  /*  */
+  display: flex;
+  flex-flow: wrap;
+  height: fit-content;
+  padding: 1rem;
 }
-
 a {
+  text-decoration: none;
   color: white;
 }
-
 .spacer {
   flex: 1 1 auto;
 }

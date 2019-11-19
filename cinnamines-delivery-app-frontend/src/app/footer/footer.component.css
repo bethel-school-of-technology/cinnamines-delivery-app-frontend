@@ -3,7 +3,7 @@ h1{
   font-family:Helvetica;
   font-style: bold;
   background-color: wheat;
-  width: 30%;
+  width: fit-content;
   border: solid .3rem;
   background-color:wheat;
   border-radius: 1rem 1rem;
@@ -73,6 +73,6 @@ h5{
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
- 
+
 }
 
