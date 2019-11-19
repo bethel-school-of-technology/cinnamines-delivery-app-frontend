@@ -1,22 +1,10 @@
 mat-form-field,
 textarea {
-  width: 100%;
+  width: fit-content;
 }
 form{
-  width: 100%;
+  width: fit-content;
 }
-/* h1
-{
-  color: rgb(17, 1, 1);
-  text-transform: uppercase;
-  font-family: 'Playfair Display', serif;
-  letter-spacing: .4em;
-  font-size: 2.6rem;
-  text-shadow: 0 1px 0 rgba(black, .1);
-  text-indent: .3em;
-  text-overflow: clip;
-  text-align: center;
-} */
 h1 {
   background-color: rgb(70, 50, 15);
   border: solid .3rem;
@@ -24,6 +12,7 @@ h1 {
   background-color: rgba(0, 170, 255, 0.719);
   border-radius: 1rem 1rem;
   padding: .4rem;
+  width: fit-content;
 }
 h4{
   background-color: rgb(70, 50, 15);
@@ -32,4 +21,5 @@ h4{
   background-color: rgba(0, 170, 255, 0.719);
   border-radius: 1rem 1rem;
   padding: .4rem;
+  width: fit-content;
 }

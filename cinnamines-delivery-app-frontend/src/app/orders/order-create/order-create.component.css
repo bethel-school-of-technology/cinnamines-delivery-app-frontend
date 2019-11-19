@@ -3,7 +3,7 @@ textarea {
   width: 100%;
 }
 form{
-  width: 100%;
+  width: fit-content;
 }
 h2
 {
@@ -16,4 +16,12 @@ h2
   font-size: 10rem;
   background-color: rgb(223, 147, 16);
   border-color:rgb(70, 50, 15);
+  width: fit-content;
 }
+h4 {background-color: rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    background-color: rgba(0, 170, 255, 0.719);
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+    width: fit-content;}

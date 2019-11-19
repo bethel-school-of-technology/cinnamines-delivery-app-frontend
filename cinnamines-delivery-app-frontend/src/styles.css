@@ -22,6 +22,7 @@ body {
   background-color: rgb(70, 50, 15);
   color:wheat;
   border: solid .3rem;
+  width: fit-content;
   border-style: ridge;
   background-color:rgb(70, 50, 15);
   border-radius: 1rem 1rem;
@@ -44,6 +45,7 @@ body {
   background-color: rgba(0, 170, 255, 0.719);
   border-radius: 1rem 1rem;
   padding: .4rem;
+  width: fit-content;
 }
 .mat-form-field-infix
 {
@@ -64,6 +66,7 @@ body {
     border-radius: 1rem 1rem;
     padding: .4rem;
     margin: 1rem;
+    width: fit-content;
 }  
 /* .mat-button.mat-button-base.mat-warn
 {
@@ -83,8 +86,25 @@ body {
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
-}
+  }
 .mat-form-field
 {
- 
+  width: fit-content;
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+  width: fit-content;
 }
+/* .app-profile.ng-star-inserted
+{
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+  width: fit-content;
+} */
