@@ -1,6 +1,6 @@
  .box {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   border-radius: .5rem;
   box-shadow: 0 2px 30px rgba(black, .2);
   background: lighten(#f0f4c3, 10%);
@@ -91,16 +91,16 @@ img {
 }
 
 div.gallery {
-  margin: 2.7rem;
+  margin: 3rem;
   border: .14rem solid wheat;
   float: left;
-  width: 11.25rem;
+  width: 12.8rem;
   background-color:  rgb(70, 50, 15);
-  margin-top: -10rem;
+  margin-top: -1rem;
   color:wheat;
   border: solid .3rem;
   border-style: ridge;
-
+  padding-top: -10rem;
 }
 
 div.gallery:hover {
@@ -108,7 +108,7 @@ div.gallery:hover {
 }
 
 div.gallery img {
-  width: 13.8rem;
+  width: 14.8rem;
   height: 13.8rem;
   border: 2px solid black;
   border-radius: 5rem 2rem;

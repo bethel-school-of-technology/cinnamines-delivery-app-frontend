@@ -2,11 +2,11 @@ footer{
   flex-wrap: wrap;
 }
 h1{
+  width: fit-content;
   color:rgb(42, 20, 236);
   font-family:Helvetica;
   font-style: bold;
   background-color: wheat;
-  width: 30%;
   border: solid .3rem;
   background-color:wheat;
   border-radius: 1rem 1rem;
@@ -18,7 +18,7 @@ h1{
   padding: .4rem;
 }
 h2{
-  width: 100%;
+  width: fit-content;
   color:wheat;
   border: solid .3rem;
   border-style: ridge;
@@ -33,11 +33,10 @@ h2{
   text-indent: .3em;
   text-overflow: clip;
   text-align: center;
-
 }
 h3{
   text-align: center;
-  width: 100%;
+  width: fit-content;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
@@ -50,8 +49,8 @@ h3{
   font-size: 1rem;
 }
 h4{
+  width: fit-content;
   text-align: center;
-  width: 100%;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
@@ -65,7 +64,7 @@ h4{
 }
 h5{
   text-align: center;
-  width: 100%;
+  width: fit-content;
   color: wheat;
   border: solid .3rem;
   border-style: ridge;
@@ -76,6 +75,6 @@ h5{
   font-family: 'Playfair Display', serif;
   letter-spacing: .4em;
   font-size: 1rem;
- 
+ align-content: center;
 }
 
