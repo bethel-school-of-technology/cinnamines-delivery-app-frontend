@@ -5,3 +5,15 @@ textarea {
 form{
   width: 100%;
 }
+h2
+{
+  color: black;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 10rem;
+  background-color: rgb(223, 147, 16);
+  border-color:rgb(70, 50, 15);
+}

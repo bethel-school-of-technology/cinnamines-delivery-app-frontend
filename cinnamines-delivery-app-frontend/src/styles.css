@@ -47,7 +47,6 @@ body {
 }
 .mat-form-field-infix
 {
-  font-family: Arial, Helvetica, sans-serif;
   color: wheat;
   margin: 1rem;
   font-style: italic;
@@ -76,5 +75,16 @@ body {
     padding: .1rem;
 }   */
 
-
-
+.ng-star-inserted
+{
+  color:black;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+}
+.mat-form-field
+{
+ 
+}
