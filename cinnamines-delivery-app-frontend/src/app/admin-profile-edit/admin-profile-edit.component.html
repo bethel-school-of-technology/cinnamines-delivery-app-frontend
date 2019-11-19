@@ -12,27 +12,25 @@
 
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-          <mat-form-field>
-            <mat-label>New Status</mat-label>
-            <mat-select ngModel name="status" type="status">
-              <mat-option value="Awaiting Confirmation">Awaiting Confirmation</mat-option>
-              <mat-option value="Confirmed">Confirmed</mat-option>
-              <mat-option value="Enroute">Enroute</mat-option>
-              <mat-option value="Delivered">Delivered</mat-option>
-            </mat-select>
-          </mat-form-field>
-          <button mat-raised-button color="primary" type="submit">Update Status</button>
-        </form>
-        <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
-      </mat-card>
-
-      <!-- <mat-card>
-        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-          <mat-form-field>
-            <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
-              required>
-            <mat-error *ngIf="statusInput.invalid">Please enter updated status</mat-error>
-          </mat-form-field>
+      
+      <label id="radio-group-label">Edit Status</label>
+      <mat-radio-group
+        [(ngModel)]="status"
+        name = "status"
+        aria-labelledby="radio-group-label"
+        class="radio-group"
+        >
+        <mat-radio-button
+          class="radio-button"
+          *ngFor="let status of statusOption"
+          [value]="status">
+          {{status}}
+          >
+        </mat-radio-button>
+      </mat-radio-group>
+     
+      <!-- submit new status  -->
+        
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
         <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>

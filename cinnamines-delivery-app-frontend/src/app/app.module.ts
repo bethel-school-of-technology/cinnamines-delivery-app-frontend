@@ -10,6 +10,9 @@ import {
   MatExpansionModule,
   MatSelectModule
 } from '@angular/material';
+import {MatRadioModule} from '@angular/material/radio';
+
+
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
@@ -57,6 +60,7 @@ import { OrdersService } from 'src/services/orders.service';
     MatSelectModule,
     AppRoutingModule,
     MatExpansionModule,
+    MatRadioModule,
     HttpClientModule,
   ],
   providers: [
