@@ -12,48 +12,30 @@
         Order Delivery Date: {{order.delivDate}}<br>
         Order Status: {{order.status}}<br>
       </p>
-      <!-- <mat-accordion>
-        <mat-expansion-panel>
-          <mat-expansion-panel-header>
-            <mat-panel-title>
-              Update Status
-            </mat-panel-title>
-            <mat-panel-description>
-              Please Choose a Status
-            </mat-panel-description>
-          </mat-expansion-panel-header>
-          <button mat-button>Awaiting Confirmation</button>
-          <button mat-button>Confirmed</button>
-          <button mat-button>Enroute</button>
-          <button mat-button>Delivered</button>
-          <mat-action-row>
-            <button mat-button color="primary">Update Status</button>
-          </mat-action-row>
-        </mat-expansion-panel>
-      </mat-accordion> -->
-
+     
       <!-- select new status -->
+
+      <mat-card>
+        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
+      
       <label id="radio-group-label">Edit Status</label>
       <mat-radio-group
+        [(ngModel)]="status"
+        name = "status"
         aria-labelledby="radio-group-label"
         class="radio-group"
-        [(ngModel)] = "newStatus">
+        >
         <mat-radio-button
           class="radio-button"
           *ngFor="let status of statusOption"
           [value]="status">
           {{status}}
+          >
         </mat-radio-button>
       </mat-radio-group>
      
       <!-- submit new status  -->
-      <mat-card>
-        <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-          <mat-form-field>
-            <input matInput name="status" ngModel type="status" placeholder="New Status" #statusInput="ngModel"
-              required>
-            <mat-error *ngIf="statusInput.invalid">Please enter updated status</mat-error>
-          </mat-form-field>
+        
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
       </mat-card>

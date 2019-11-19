@@ -5,6 +5,9 @@ import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
 import { NgForm } from '@angular/forms';
 import { MatRadioModule } from '@angular/material/radio';
+import { strictEqual } from 'assert';
+import { stringify } from 'querystring';
+import { analyzeAndValidateNgModules } from '@angular/compiler';
 
 @Component({
   selector: 'app-admin-profile-edit',
@@ -13,7 +16,7 @@ import { MatRadioModule } from '@angular/material/radio';
 })
 export class AdminProfileEditComponent implements OnInit {
   orders: Order[];
-  newStatus: string;
+  status: string;
   statusOption: string[] = [
     'Awaiting Confirmation',
     'Confirmed',
@@ -56,21 +59,10 @@ export class AdminProfileEditComponent implements OnInit {
       console.log(response.message);
       this.getStatusOrders();
     });
-    // (form.value.name).subscribe(response => {
-    //   console.log(response.message);
-    //   this.getUser();
+
     form.resetForm();
   }
 
 
 }
 
-// export class SetStatusRadio {
-//   newStatus: string;
-//   statusOption: string[] = [
-//     'Awating Confirmation',
-//     'Confirmed',
-//     'Enroute',
-//     'Delivered'
-//   ];
-// }
