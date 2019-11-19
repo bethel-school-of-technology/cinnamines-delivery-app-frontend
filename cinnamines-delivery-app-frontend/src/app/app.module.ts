@@ -6,7 +6,9 @@ import {
   MatInputModule,
   MatCardModule,
   MatButtonModule,
-  MatToolbarModule, MatExpansionModule
+  MatToolbarModule,
+  MatExpansionModule,
+  MatSelectModule
 } from '@angular/material';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -52,6 +54,7 @@ import { OrdersService } from 'src/services/orders.service';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatSelectModule,
     AppRoutingModule,
     MatExpansionModule,
     HttpClientModule,
