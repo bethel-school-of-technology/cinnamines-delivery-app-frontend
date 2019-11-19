@@ -1,6 +1,8 @@
 <p class="pageTitle" >admin-profile-edit works! Here is a list of all orders that do not have a status of "Delivered". Please Update Status
   When Ready!</p>
 
+<h1>Current Orders:</h1>
+
 <div>
   <ol>
     <li *ngFor="let order of orders">
@@ -38,6 +40,7 @@
         
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
+        <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
       </mat-card>
     </li>
   </ol>

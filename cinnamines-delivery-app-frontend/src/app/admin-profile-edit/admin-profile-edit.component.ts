@@ -59,8 +59,14 @@ export class AdminProfileEditComponent implements OnInit {
       console.log(response.message);
       this.getStatusOrders();
     });
-
     form.resetForm();
+  }
+
+  deleteOrder(orderId) {
+    this.ordersService.deleteOrder(orderId).subscribe(response => {
+      console.log(response.message);
+      this.getStatusOrders();
+    });
   }
 
 
