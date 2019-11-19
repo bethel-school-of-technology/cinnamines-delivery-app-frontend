@@ -5,6 +5,8 @@ import { map } from 'rxjs/operators';
 
 import { Order } from 'src/app/models/order';
 
+import { environment } from '../environments/environment';
+
 @Injectable({providedIn: 'root'})
 export class MyService {
   private orders: Order[] = [];
@@ -14,9 +16,7 @@ export class MyService {
 
   getOrders() {
     this.http
-      .get<{ message: string; orders: any }>(
-        '"http://localhost:4000/orders'
-      )
+      .get<{ message: string; orders: any }>(environment.apiUrl)
       .pipe(map((orderData) => {
         return orderData.orders.map(order => {
           return {
