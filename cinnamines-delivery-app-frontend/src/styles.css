@@ -1,1 +1,110 @@
+body {
+  background-image: url(../src/assets/images/cin8.jpg);
+}
+.mat-toolbar.mat-toolbar
+{
+  background-color: rgba(127, 255, 212, 0);
+  padding: .12rem;
+}
+.mat-button-wrapper
+{
+  background-color: rgb(70, 50, 15);
+  color: wheat;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: .7rem;
+}
+.mat-button.mat-button
+{
+  background-color: rgb(70, 50, 15);
+  color:wheat;
+  border: solid .3rem;
+  width: fit-content;
+  border-style: ridge;
+  background-color:rgb(70, 50, 15);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+}
+.mat-form.mat-form
+{
+  color: wheat;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+}
+.mat-card.mat-card
+{
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+  width: fit-content;
+}
+.mat-form-field-infix
+{
+  color: wheat;
+  margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+}
+ .mat-raised-button.mat-raised-button.mat-button-base.mat-primary
+{
+    background-color: rgb(70, 50, 15);
+    border-color:rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    border-radius: 1rem 1rem;
+    padding: .4rem;
+    margin: 1rem;
+    width: fit-content;
+}  
+/* .mat-button.mat-button-base.mat-warn
+{
+    background-color: rgb(70, 50, 15);
+    border-color:rgb(70, 50, 15);
+    border: solid .3rem;
+    border-style: ridge;
+    border-radius: 1rem 1rem;
+    padding: .1rem;
+}   */
 
+.ng-star-inserted
+{
+  color:black;
+  font-style: italic;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: .4em;
+  font-size: 1rem;
+  }
+.mat-form-field
+{
+  width: fit-content;
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+  width: fit-content;
+}
+/* .app-profile.ng-star-inserted
+{
+  background-color: rgb(70, 50, 15);
+  border: solid .3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: .4rem;
+  width: fit-content;
+} */

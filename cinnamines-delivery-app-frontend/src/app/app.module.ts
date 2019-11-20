@@ -8,6 +8,7 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
+  MatSelectModule
 } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
 
@@ -56,6 +57,7 @@ import { OrdersService } from 'src/services/orders.service';
     MatCardModule,
     MatButtonModule,
     MatToolbarModule,
+    MatSelectModule,
     AppRoutingModule,
     MatExpansionModule,
     MatRadioModule,

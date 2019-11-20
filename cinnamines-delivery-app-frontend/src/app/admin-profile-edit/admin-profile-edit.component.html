@@ -1,20 +1,20 @@
+<<<<<<< HEAD
 <p></p>
 
 <h1>Current Orders: Undelivered</h1>
+=======
+<h1>Current Orders:</h1>
+>>>>>>> b6d4afa747c0d48ed872926a6ad4319d07f27815
 
 <div>
   <ol>
     <li *ngFor="let order of orders">
-      <p>
-        Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br>
-        Order Quantity: {{order.qty}}<br>
-        Order Address: {{order.address}}<br>
-        Order Delivery Date: {{order.delivDate}}<br>
-        Order Status: {{order.status}}<br>
-      </p>
-     
-      <!-- select new status -->
+      <div>
+        <h4>Order Quantity: {{order.qty}}</h4>
+        <h4>Order Address: {{order.address}}</h4>
+        <h4>Order Delivery Date: {{order.delivDate}}</h4>
+        <h4>Order Status: {{order.status}}</h4>
+      </div>
 
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
@@ -40,7 +40,7 @@
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
         <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
-      </mat-card>
+      </mat-card> -->
     </li>
   </ol>
 </div>
