@@ -67,7 +67,7 @@ body {
     padding: .4rem;
     margin: 1rem;
     width: fit-content;
-}  
+}
 /* .mat-button.mat-button-base.mat-warn
 {
     background-color: rgb(70, 50, 15);
@@ -87,24 +87,3 @@ body {
   letter-spacing: .4em;
   font-size: 1rem;
   }
-.mat-form-field
-{
-  width: fit-content;
-  background-color: rgb(70, 50, 15);
-  border: solid .3rem;
-  border-style: ridge;
-  background-color: rgba(0, 170, 255, 0.719);
-  border-radius: 1rem 1rem;
-  padding: .4rem;
-  width: fit-content;
-}
-/* .app-profile.ng-star-inserted
-{
-  background-color: rgb(70, 50, 15);
-  border: solid .3rem;
-  border-style: ridge;
-  background-color: rgba(0, 170, 255, 0.719);
-  border-radius: 1rem 1rem;
-  padding: .4rem;
-  width: fit-content;
-} */
