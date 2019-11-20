@@ -12,7 +12,7 @@
 
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-      
+
       <label id="radio-group-label">Edit Status</label>
       <mat-radio-group
         [(ngModel)]="status"
@@ -25,12 +25,12 @@
           *ngFor="let status of statusOption"
           [value]="status">
           {{status}}
-          >
+          
         </mat-radio-button>
       </mat-radio-group>
-     
+
       <!-- submit new status  -->
-        
+
           <button mat-raised-button color="primary" type="submit">Update Status</button>
         </form>
         <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
