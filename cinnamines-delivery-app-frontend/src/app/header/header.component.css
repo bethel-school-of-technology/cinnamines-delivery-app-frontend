@@ -4,6 +4,7 @@
   flex-flow: wrap;
   height: fit-content;
   padding: 1rem;
+  margin-top: -2.5rem;
 }
 .mat-button-wrapper
 {
@@ -42,7 +43,6 @@ a {
 }
 img
  {
-    margin-top: 1rem;
     width: 10rem;
     height: 3.4rem;
     border: solid .25rem;
@@ -54,4 +54,5 @@ img
     background-color: rgba(0, 170, 255, 0.719);
     border-radius: 1rem 1rem;
     padding: .4rem;
+    margin-top: 1.4rem;
   }
