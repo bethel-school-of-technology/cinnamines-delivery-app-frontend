@@ -1,6 +1,7 @@
 #deletebutton {
   margin-right: 1rem;
 }
+
 mat-form-field,
 textarea {
   width: fit-content;
@@ -35,4 +36,8 @@ h4{
     border-radius: 1rem 1rem;
     padding: .4rem;
     width: fit-content;
+}
+
+#userEmail{
+  text-transform: initial;
 }
