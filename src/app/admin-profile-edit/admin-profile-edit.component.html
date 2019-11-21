@@ -1,4 +1,6 @@
-<h1>Current Orders:</h1>
+<p></p>
+
+<h1>Current Orders: Undelivered</h1>
 
 <div>
   <ol>
@@ -7,13 +9,13 @@
         <h4>Order Quantity: {{order.qty}}</h4>
         <h4>Order Address: {{order.address}}</h4>
         <h4>Order Delivery Date: {{order.delivDate}}</h4>
-        <h4>Order Status: {{order.status}}</h4>
+        <h4>Order Status: <span class="orderStatus" >{{order.status}}</span> </h4>
       </div>
 
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
-      
-      <label id="radio-group-label">Edit Status</label>
+
+      <label id="radio-group-label">Edit Order Status</label>
       <mat-radio-group
         [(ngModel)]="status"
         name = "status"
@@ -25,16 +27,16 @@
           *ngFor="let status of statusOption"
           [value]="status">
           {{status}}
-          >
+
         </mat-radio-button>
       </mat-radio-group>
-     
+
       <!-- submit new status  -->
-        
+
           <button mat-raised-button color="primary" type="submit">Update Status</button>
+          <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
         </form>
-        <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
-      </mat-card> -->
+      </mat-card>
     </li>
   </ol>
 </div>
