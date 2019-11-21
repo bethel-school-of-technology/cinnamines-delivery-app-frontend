@@ -25,6 +25,7 @@
   transform-origin: 50% 48%;
   border-radius: 43%;
   animation: drift 3000ms infinite linear;
+  z-index: -1;
 }
 
 .wave.-three {
@@ -74,7 +75,7 @@ h2{
   color: rgb(17, 1, 1);
   text-transform: uppercase;
   font-family: 'Playfair Display', serif;
-  letter-spacing: .2em;
+  letter-spacing: .4em;
   /*  */
   font-size: 4rem;
   text-shadow: 0 1px 0 rgba(black, .1);
@@ -82,7 +83,7 @@ h2{
   text-overflow: clip;
   text-align: center;
   /*  */
-  font-weight: bolder;
+  font-weight: boldest;
 }
 
 img {
