@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://murmuring-fortress-58380.herokuapp.com'
+  apiUrl: 'https://murmuring-fortress-58380.herokuapp.com'
 };
 
 /*
