@@ -8,6 +8,8 @@ import { MatRadioModule } from '@angular/material/radio';
 import { strictEqual } from 'assert';
 import { stringify } from 'querystring';
 import { analyzeAndValidateNgModules } from '@angular/compiler';
+import { MatDialog } from '@angular/material';
+import { ConfirmationDialogComponent } from '../components/shared/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-admin-profile-edit',
@@ -23,11 +25,14 @@ export class AdminProfileEditComponent implements OnInit {
     'Enroute',
     'Delivered'
   ];
+  title = 'angular-confirmation-dialog';
+
 
   constructor(
     private ordersService: OrdersService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -66,6 +71,19 @@ export class AdminProfileEditComponent implements OnInit {
     this.ordersService.deleteOrder(orderId).subscribe(response => {
       console.log(response.message);
       this.getStatusOrders();
+    });
+  }
+
+  openDialog(): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '350px',
+      data: 'Confirm Deletion of this Order'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if (result) {
+        console.log('\"Yes\" Clicked');
+        //  Do Something
+      }
     });
   }
 

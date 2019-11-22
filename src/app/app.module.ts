@@ -74,7 +74,7 @@ import { ConfirmationDialogComponent } from './components/shared/confirmation-di
     UsersService,
     OrdersService
   ],
-
+  entryComponents: [ConfirmationDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
