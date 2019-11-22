@@ -8,9 +8,12 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
-  MatSelectModule
+  MatSelectModule,
+  MatDialog,
+  MatDialogModule
 } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
+
 
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -32,6 +35,7 @@ import { HeaderComponent } from './header/header.component';
 
 import { UsersService } from 'src/services/users.service';
 import { OrdersService } from 'src/services/orders.service';
+import { ConfirmationDialogComponent } from './components/shared/confirmation-dialog/confirmation-dialog.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,7 @@ import { OrdersService } from 'src/services/orders.service';
     LogOnComponent,
     FooterComponent,
     HeaderComponent,
+    ConfirmationDialogComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,6 +67,7 @@ import { OrdersService } from 'src/services/orders.service';
     MatExpansionModule,
     MatRadioModule,
     HttpClientModule,
+    MatDialogModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
