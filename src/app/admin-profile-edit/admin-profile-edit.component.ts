@@ -73,8 +73,8 @@ export class AdminProfileEditComponent implements OnInit {
       this.getStatusOrders();
     });
   }
-
-  openDialog(): void {
+        // delete confirmation dialog`
+  openDialog(orderId): void {
     const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
       width: '350px',
       data: 'Confirm Deletion of this Order'
@@ -82,7 +82,9 @@ export class AdminProfileEditComponent implements OnInit {
     dialogRef.afterClosed().subscribe(result => {
       if (result) {
         console.log('\"Yes\" Clicked');
+        console.log(orderId);
         //  Do Something
+        this.deleteOrder(orderId);
       }
     });
   }

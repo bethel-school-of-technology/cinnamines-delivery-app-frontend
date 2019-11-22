@@ -52,3 +52,7 @@ h4{
     padding: .4rem;
     width: fit-content;
 }
+
+#delButton {
+  color: initial;
+}
