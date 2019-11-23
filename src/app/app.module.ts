@@ -9,12 +9,11 @@ import {
   MatToolbarModule,
   MatExpansionModule,
   MatSelectModule,
-  MatDialog,
-  MatDialogModule
+  MatDialogModule,
+  MatProgressBarModule
 } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
-
-
+import { IsLoadingModule } from '@service-work/is-loading';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -67,7 +66,9 @@ import { ConfirmationDialogComponent } from './components/shared/confirmation-di
     MatExpansionModule,
     MatRadioModule,
     HttpClientModule,
-    MatDialogModule
+    MatDialogModule,
+    MatProgressBarModule,
+    IsLoadingModule
   ],
   providers: [
     {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
