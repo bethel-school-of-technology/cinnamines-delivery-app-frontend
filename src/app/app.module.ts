@@ -35,6 +35,7 @@ import { HeaderComponent } from './header/header.component';
 import { UsersService } from 'src/services/users.service';
 import { OrdersService } from 'src/services/orders.service';
 import { ConfirmationDialogComponent } from './components/shared/confirmation-dialog/confirmation-dialog.component';
+import { LoadingProgressBarComponent } from './components/shared/loading-progress-bar/loading-progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { ConfirmationDialogComponent } from './components/shared/confirmation-di
     FooterComponent,
     HeaderComponent,
     ConfirmationDialogComponent,
+    LoadingProgressBarComponent,
   ],
   imports: [
     BrowserModule,
