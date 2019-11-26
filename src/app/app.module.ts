@@ -12,7 +12,7 @@ import {
   MatDialog,
   MatDialogModule
 } from '@angular/material';
-import {MatRadioModule} from '@angular/material/radio';
+import { MatRadioModule } from '@angular/material/radio';
 
 
 
@@ -70,7 +70,7 @@ import { ConfirmationDialogComponent } from './components/shared/confirmation-di
     MatDialogModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     UsersService,
     OrdersService
   ],

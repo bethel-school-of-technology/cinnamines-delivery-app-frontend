@@ -5,13 +5,12 @@
       <div>
         <!-- User Id: {{user._id}}<br> -->
         <h4>User Name: {{user.name}}</h4>
-        <h4>User email: <span id="userEmail" >{{user.email}}</span></h4>
+        <h4>User email: <span id="userEmail">{{user.email}}</span></h4>
         <h4>User Phone: {{user.phone}}</h4>
       </div>
       <button id="deletebutton" mat-raised-button color="primary" (click)="deleteUser(user._id)">Delete This User</button>
       <button mat-raised-button color="primary" (click)="makeAdmin(user._id)">Make This User A Admin</button>
+      <hr>
     </li>
   </ol>
 </div>
-
-<div id="errorMessage"></div>

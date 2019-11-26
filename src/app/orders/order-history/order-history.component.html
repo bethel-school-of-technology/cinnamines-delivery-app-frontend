@@ -1,18 +1,14 @@
-
-<p></p>
-
 <div>
   <h1>Your Order History:</h1>
   <ol>
     <li *ngFor="let order of orders">
       <div>
-        <!-- Order Id: {{order._id}}<br>
-        Order UserId: {{order.user_id}}<br> -->
         <h3>Order Quantity: {{order.qty}}</h3>
         <h3>Order Address: {{order.address}}</h3>
         <h3>Order Delivery Date: {{order.delivDate}}</h3>
-        <h3>Order Status: {{order.status}}</h3><br>
+        <h3>Order Status: {{order.status}}</h3>
         </div>
+        <hr>
     </li>
   </ol>
 </div>
