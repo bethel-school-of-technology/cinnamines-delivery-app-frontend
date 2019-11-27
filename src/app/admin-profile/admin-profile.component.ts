@@ -3,6 +3,8 @@ import { User } from '../models/user';
 import { UsersService } from 'src/services/users.service';
 import { AuthService } from '../auth/auth.service';
 import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material';
+import { ConfirmationDialogComponent } from '../components/shared/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-admin-profile',
@@ -11,11 +13,13 @@ import { Router } from '@angular/router';
 })
 export class AdminProfileComponent implements OnInit {
   users: User[];
+  title = ' angular-confirmation-component';
 
   constructor(
     private usersService: UsersService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -50,6 +54,20 @@ export class AdminProfileComponent implements OnInit {
     this.usersService.makeAdmin(userId).subscribe(response => {
       console.log(response.message);
       this.getUsers();
+    });
+  }
+
+    // delete confirmation dialog
+  openDialog(userId): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '350px',
+      data: 'Confirm Deletion of this User'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      console.log('\"Yes\" Clicked');
+      console.log(userId);
+      // Exterminate, Exterminate
+      this.deleteUser(userId);
     });
   }
 
