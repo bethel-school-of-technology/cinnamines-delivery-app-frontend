@@ -1,19 +1,21 @@
-
 h1 {
   background-color: rgb(70, 50, 15);
-  border: solid .3rem;
+  border: solid 0.3rem;
   border-style: ridge;
   background-color: rgba(0, 170, 255, 0.719);
   border-radius: 1rem 1rem;
-  padding: .4rem;
+  padding: 0.4rem;
   width: fit-content;
 }
-h3{
+h3 {
   background-color: rgb(70, 50, 15);
-  border: solid .3rem;
+  border: solid 0.3rem;
   border-style: ridge;
   background-color: rgba(0, 170, 255, 0.719);
   border-radius: 1rem 1rem;
-  padding: .4rem;
+  padding: 0.4rem;
   width: fit-content;
+}
+hr {
+  border-width: 0.25rem;
 }

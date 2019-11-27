@@ -1,4 +1,3 @@
-<p></p>
 <h1>All Orders:</h1>
 <div>
   <ol>
@@ -10,8 +9,9 @@
         <h4>Order Address: {{order.address}}</h4>
         <h4>Order Delivery Date: {{order.delivDate}}</h4>
         <h4>Order Status: {{order.status}}</h4>
-        </div>
+      </div>
       <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button>
+      <hr>
     </li>
   </ol>
 </div>

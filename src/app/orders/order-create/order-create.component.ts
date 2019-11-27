@@ -44,7 +44,7 @@ export class OrderCreateComponent implements OnInit {
     this.ordersService.createOrder(form.value.qty, form.value.address, form.value.delivDate)
       .subscribe(response => {
         console.log(response.message);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/order-history']);
       });
     // form.resetForm();
   }

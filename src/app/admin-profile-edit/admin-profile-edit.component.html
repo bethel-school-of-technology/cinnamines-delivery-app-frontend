@@ -1,5 +1,3 @@
-<p></p>
-
 <h1>Current Orders: Undelivered</h1>
 
 <div>
@@ -9,37 +7,30 @@
         <h4>Order Quantity: {{order.qty}}</h4>
         <h4>Order Address: {{order.address}}</h4>
         <h4>Order Delivery Date: {{order.delivDate}}</h4>
-        <h4>Order Status: <span class="orderStatus" >{{order.status}}</span> </h4>
+        <h4>Order Status: <span class="orderStatus">{{order.status}}</span> </h4>
       </div>
 
       <mat-card>
         <form (submit)="updateStatus(order._id, newStatusForm)" #newStatusForm="ngForm">
 
-      <label id="radio-group-label">Edit Order Status</label>
-      <mat-radio-group
-        [(ngModel)]="status"
-        name = "status"
-        aria-labelledby="radio-group-label"
-        class="radio-group"
-        >
-        <mat-radio-button
-          class="radio-button"
-          *ngFor="let status of statusOption"
-          [value]="status">
-          {{status}}
+          <label id="radio-group-label">Edit Order Status</label>
+          <mat-radio-group [(ngModel)]="status" name="status" aria-labelledby="radio-group-label" class="radio-group">
+            <mat-radio-button class="radio-button" *ngFor="let status of statusOption" [value]="status">
+              {{status}}
 
-        </mat-radio-button>
-      </mat-radio-group>
+            </mat-radio-button>
+          </mat-radio-group>
 
-      <!-- submit new status  -->
+          <!-- submit new status  -->
 
           <button mat-raised-button color="primary" type="submit">Update Status</button>
           <!-- <button mat-raised-button color="primary" (click)="deleteOrder(order._id)">Delete This Order</button> -->
-          
+
           <!-- delete order -->
-          <button mat-raised-button color="primary" (click)="openDialog(order._id)" >Delete this Order</button>
+          <button mat-raised-button color="primary" (click)="openDialog(order._id)">Delete this Order</button>
         </form>
       </mat-card>
+      <hr>
     </li>
   </ol>
 </div>
