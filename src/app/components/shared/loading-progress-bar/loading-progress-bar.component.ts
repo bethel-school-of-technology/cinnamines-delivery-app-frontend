@@ -6,18 +6,19 @@ import { filter } from 'rxjs/operators';
 
 @Component({
   selector: 'app-loading-progress-bar',
-  template:  `
-    <mat-progress-bar
-      *ngIf="isLoading | async"
-      mode="indeterminate"
-      color="warn"
-      style="position: absolute; top: 0; z-index: 5000;"
-    >
-    </mat-progress-bar>
+  template:
+  // `
+  //   <mat-progress-bar
+  //     *ngIf="isLoading | async"
+  //     mode="indeterminate"
+  //     color="warn"
+  //     style="position: absolute; top: 0; z-index: 5000;"
+  //   >
+  //   </mat-progress-bar>
 
-    <router-outlet></router-outlet>
-  `,
-  // './loading-progress-bar.component.html',
+  //   <router-outlet></router-outlet>
+  // `,
+  './loading-progress-bar.component.html',
   styleUrls: ['./loading-progress-bar.component.css']
 })
 export class LoadingProgressBarComponent implements OnInit {
