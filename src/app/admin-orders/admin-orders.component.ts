@@ -3,6 +3,8 @@ import { Order } from '../models/order';
 import { OrdersService } from 'src/services/orders.service';
 import { Router } from '@angular/router';
 import { AuthService } from '../auth/auth.service';
+import { MatDialog } from '@angular/material';
+import { ConfirmationDialogComponent } from '../components/shared/confirmation-dialog/confirmation-dialog.component';
 
 @Component({
   selector: 'app-admin-orders',
@@ -11,11 +13,13 @@ import { AuthService } from '../auth/auth.service';
 })
 export class AdminOrdersComponent implements OnInit {
   orders: Order[];
+  title = 'angular-confirmation-component';
 
   constructor(
     private ordersService: OrdersService,
     private authService: AuthService,
-    private router: Router
+    private router: Router,
+    public dialog: MatDialog
   ) { }
 
   ngOnInit() {
@@ -44,6 +48,22 @@ export class AdminOrdersComponent implements OnInit {
     this.ordersService.deleteOrder(orderId).subscribe(response => {
       console.log(response.message);
       this.getAllOrders();
+    });
+  }
+
+      // delete confirmation dialog
+  openDialog(orderId): void {
+    const dialogRef = this.dialog.open(ConfirmationDialogComponent, {
+      width: '350px',
+      data: 'Confirm Deletion of this Order'
+    });
+    dialogRef.afterClosed().subscribe(result => {
+      if(result) {
+      console.log('\"Yes\" Clicked');
+      console.log(orderId);
+      // "It's a Trap" delete this Order, Mwahhhhahaha
+      this.deleteOrder(orderId);
+      }
     });
   }
 

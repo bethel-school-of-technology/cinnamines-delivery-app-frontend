@@ -13,7 +13,7 @@ import { ConfirmationDialogComponent } from '../components/shared/confirmation-d
 })
 export class AdminProfileComponent implements OnInit {
   users: User[];
-  title = ' angular-confirmation-component';
+  title = 'angular-confirmation-component';
 
   constructor(
     private usersService: UsersService,
@@ -64,10 +64,12 @@ export class AdminProfileComponent implements OnInit {
       data: 'Confirm Deletion of this User'
     });
     dialogRef.afterClosed().subscribe(result => {
+      if(result) {
       console.log('\"Yes\" Clicked');
       console.log(userId);
       // Exterminate, Exterminate
       this.deleteUser(userId);
+      }
     });
   }
 
