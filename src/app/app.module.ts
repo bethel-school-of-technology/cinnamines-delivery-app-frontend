@@ -8,10 +8,12 @@ import {
   MatButtonModule,
   MatToolbarModule,
   MatExpansionModule,
-  MatSelectModule
+  MatSelectModule,
+  MatDialogModule,
+  MatProgressBarModule
 } from '@angular/material';
 import {MatRadioModule} from '@angular/material/radio';
-
+import { IsLoadingModule } from '@service-work/is-loading';
 
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -32,6 +34,8 @@ import { HeaderComponent } from './header/header.component';
 
 import { UsersService } from 'src/services/users.service';
 import { OrdersService } from 'src/services/orders.service';
+import { ConfirmationDialogComponent } from './components/shared/confirmation-dialog/confirmation-dialog.component';
+import { LoadingProgressBarComponent } from './components/shared/loading-progress-bar/loading-progress-bar.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +52,8 @@ import { OrdersService } from 'src/services/orders.service';
     LogOnComponent,
     FooterComponent,
     HeaderComponent,
+    ConfirmationDialogComponent,
+    LoadingProgressBarComponent,
   ],
   imports: [
     BrowserModule,
@@ -62,13 +68,16 @@ import { OrdersService } from 'src/services/orders.service';
     MatExpansionModule,
     MatRadioModule,
     HttpClientModule,
+    MatDialogModule,
+    MatProgressBarModule,
+    IsLoadingModule
   ],
   providers: [
-    {provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     UsersService,
     OrdersService
   ],
-
+  entryComponents: [ConfirmationDialogComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

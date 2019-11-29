@@ -35,3 +35,7 @@ h2{
   padding: .4rem;
   width: fit-content;
 }
+
+#userEmail{
+  text-transform: initial;
+}

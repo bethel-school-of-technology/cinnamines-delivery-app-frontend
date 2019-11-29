@@ -1,54 +1,55 @@
 mat-radio-group {
-    display: flex;
-    flex-direction: column;
-    margin: 15px 0;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
 mat-radio-button {
-    margin: 5px;
-  }
-
+  margin: 5px;
+}
 .orderStatus {
   font-style: normal;
-}  
-
+}
 mat-form-field,
 textarea {
   width: fit-content;
 }
-form{
+form {
   width: fit-content;
- } 
- h1{
-    background-color: rgb(70, 50, 15);
-    border: solid .3rem;
-    border-style: ridge;
-    background-color: rgba(0, 170, 255, 0.719);
-    border-radius: 1rem 1rem;
-    padding: .4rem;
-    width: fit-content;
 }
-.pageTitle{
-    width: 100%;
-    text-align: center;
+h1 {
+  background-color: rgb(70, 50, 15);
+  border: solid 0.3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: 0.4rem;
+  width: fit-content;
 }
-
-h4{
-    background-color: rgb(70, 50, 15);
-    border: solid .3rem;
-    border-style: ridge;
-    background-color: rgba(0, 170, 255, 0.719);
-    border-radius: 1rem 1rem;
-    padding: .4rem;
-    width: fit-content;
-  }
-  
-  h2{
-    background-color: rgb(70, 50, 15);
-    border: solid .3rem;
-    border-style: ridge;
-    background-color: rgba(0, 170, 255, 0.719);
-    border-radius: 1rem 1rem;
-    padding: .4rem;
-    width: fit-content;
+.pageTitle {
+  width: 100%;
+  text-align: center;
+}
+h4 {
+  background-color: rgb(70, 50, 15);
+  border: solid 0.3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: 0.4rem;
+  width: fit-content;
+}
+h2 {
+  background-color: rgb(70, 50, 15);
+  border: solid 0.3rem;
+  border-style: ridge;
+  background-color: rgba(0, 170, 255, 0.719);
+  border-radius: 1rem 1rem;
+  padding: 0.4rem;
+  width: fit-content;
+}
+#delButton {
+  color: initial;
+}
+hr {
+  border-width: 0.2rem;
 }
